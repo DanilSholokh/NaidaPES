@@ -1,0 +1,77 @@
+# ========== Unity Specific Files ==========
+# Temporary files and directories
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+
+# Unity Asset Store files
+Assets/AssetStoreTools*
+
+# ========== Visual Studio Specific Files ==========
+# Visual Studio solution and project files
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# Visual Studio Code specific files
+.vscode/
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# ========== Windows Specific Files ==========
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ========== Logs and Crash Reports ==========
+*.log
+*.stackdump
+
+# ========== Auto-Generated Files ==========
+# Auto-generated meta files and symbols
+*.meta
+*.pdb
+*.mdb
+*.idb
+
+# Build generated files
+*.exe
+*.dll
+*.apk
+*.unitypackage
+*.ipa
+
+# ========== JetBrains Rider Specific Files ==========
+.idea/
+*.iml
+
+# ========== Text Editor Files ==========
+*.swp
+*.lock
+*.tmp
+*.temp
+
+# ========== Backup and Cache Files ==========
+*.bak
+*.backup
+*.cache
+*.recycle
+
+# ========== Git Specific Files ==========
+# Ignore local Git config
+.git/
+
