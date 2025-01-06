@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-// данні про карту
+// данні про карту (`)(.)
 public abstract class CardData : ScriptableObject
 {
 
