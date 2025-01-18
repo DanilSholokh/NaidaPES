@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 6246dda1072436e4aa7b4e9399bf1c53
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - card: {instanceID: 0}
+  - nameCardText: {instanceID: 0}
+  - powerCardText: {instanceID: 0}
+  - faceDamageTransform: {instanceID: 0}
+  - prefabFaceDamageObject: {instanceID: 0}
+  - imagePlayer: {instanceID: 0}
+  - imageType: {instanceID: 0}
+  - naydaTypeSprite: {fileID: 21300000, guid: 04e7cd6770301214a80463faa77b05de, type: 3}
+  - evilTypeSprite: {fileID: 21300000, guid: cf6db0ba286c4cd4591ce6dc50b16a4c, type: 3}
+  - knighteTypeSprite: {fileID: 21300000, guid: 7b44c553d6616ba478cae5fac268f3b5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

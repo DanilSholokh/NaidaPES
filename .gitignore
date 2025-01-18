@@ -12,8 +12,10 @@ MemoryCaptures/
 # Unity Asset Store files
 Assets/AssetStoreTools*
 
+# Do not ignore .meta files
+# *.meta (удалено, чтобы сохранить связи ресурсов)
+
 # ========== Visual Studio Specific Files ==========
-# Visual Studio solution and project files
 *.csproj
 *.sln
 *.suo
@@ -42,8 +44,6 @@ $RECYCLE.BIN/
 *.stackdump
 
 # ========== Auto-Generated Files ==========
-# Auto-generated meta files and symbols
-*.meta
 *.pdb
 *.mdb
 *.idb
@@ -72,6 +72,5 @@ $RECYCLE.BIN/
 *.recycle
 
 # ========== Git Specific Files ==========
-# Ignore local Git config
 .git/
 
