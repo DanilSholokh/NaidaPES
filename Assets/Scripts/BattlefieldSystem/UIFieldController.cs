@@ -14,8 +14,6 @@ namespace Assets.Scripts.BattlefieldSystem
         [SerializeField] Transform playerPlaceSpell;
         [SerializeField] Transform enemyPlaceSpell;
 
-        private CreateCard createCard;
-
         private List<CardManager> playerSpellCards = new List<CardManager>();
         private List<CardManager> enemySpellCards = new List<CardManager>();
 
@@ -28,10 +26,6 @@ namespace Assets.Scripts.BattlefieldSystem
         private List<Image> playerDamageIcones = new List<Image>();
         private List<Image> enemyDamageIcones = new List<Image>();
 
-        private void Start()
-        {
-            createCard = new CreateCard();
-        }
 
         // damage icone ui
         public void setPlayerDamageStatus(int index)

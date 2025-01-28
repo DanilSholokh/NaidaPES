@@ -77,7 +77,7 @@ public class PoolsCardController : MonoBehaviour
 
         for (int i = 0; i < creatures.Count; i++)
         {
-            if (creatures[i].powerCard <= minPower)
+            if (creatures[i].getPowerCard() <= minPower)
             {
                 creatures.RemoveAt(i);
             }
@@ -95,7 +95,7 @@ public class PoolsCardController : MonoBehaviour
 
         for (int i = 0; i < creatures.Count; i++)
         {
-            if (creatures[i].powerCard >= maxPower)
+            if (creatures[i].getPowerCard() >= maxPower)
             {
                 creatures.RemoveAt(i);
             }
@@ -114,7 +114,7 @@ public class PoolsCardController : MonoBehaviour
 
         for (int i = 0; i < spells.Count; i++)
         {
-            if (spells[i].powerUp <= minPower)
+            if (spells[i].getPowerCard() <= minPower)
             {
                 spells.RemoveAt(i);
             }
@@ -132,7 +132,7 @@ public class PoolsCardController : MonoBehaviour
 
         for (int i = 0; i < spells.Count; i++)
         {
-            if (spells[i].powerUp >= maxPower)
+            if (spells[i].getPowerCard() >= maxPower)
             {
                 spells.RemoveAt(i);
             }
@@ -141,10 +141,6 @@ public class PoolsCardController : MonoBehaviour
         return spells;
 
     }
-
-
-
-
 
 
 

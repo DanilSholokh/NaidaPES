@@ -7,6 +7,7 @@ public abstract class CardData : ScriptableObject
 
     public int id;
 
+
     public string name; 
     public Sprite spriteCard;
     
@@ -21,7 +22,7 @@ public abstract class CardData : ScriptableObject
 
     public abstract BaseCardType getCardType();
     public abstract void PlayCard();
-
+    public abstract int getPowerCard();
 
     public Sprite getSpriteDataCard()
     {

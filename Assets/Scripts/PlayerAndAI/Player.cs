@@ -5,9 +5,6 @@ public class Player : PlayerBase
 {
 
 
-    
-
-
     public override void logicPlayCard(CardManager cardManager)
     {
         cardManager.card.PlayCard();

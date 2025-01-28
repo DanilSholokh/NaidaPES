@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public AIPlayer aiPlayer;
     public PlayerBase currentPlayer;
     
-    public ManagerField managerField;
+    //public ManagerField managerField;
 
 
 
@@ -51,19 +51,19 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void playCardOnField(CardManager cardManager)
-    {
+    //public void playCardOnField(CardManager cardManager)
+    //{
         
-        if (managerField.fieldPlayCard(cardManager))
-        {
-            Debug.Log("card on battle field 2");
-            cardManager.player.PlayCard(cardManager);
+    //    if (managerField.isfieldPlayCard(cardManager))
+    //    {
+    //        Debug.Log("card on battle field 2");
+    //        cardManager.player.PlayCard(cardManager);
 
-        }
+    //    }
 
 
         
-    }
+    //}
 
 
 

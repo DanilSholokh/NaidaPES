@@ -5,7 +5,7 @@ public class CardSpell : CardData
 {
 
 
-    public int powerUp;
+    public int powerSpell;
 
     public enum SpellType
     {
@@ -39,5 +39,10 @@ public class CardSpell : CardData
     public override void PlayCard()
     {
         Debug.Log("Play spell name is " + name);
+    }
+
+    public override int getPowerCard()
+    {
+        return powerSpell;
     }
 }

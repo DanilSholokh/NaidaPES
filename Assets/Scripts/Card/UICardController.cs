@@ -50,7 +50,7 @@ public class UICardController : MonoBehaviour
                 Instantiate(prefabFaceDamageObject, faceDamageTransform);
             }
 
-            powerCardText.text = cardCreature.powerCard.ToString();
+            powerCardText.text = cardCreature.getPowerCard().ToString();
 
         }
 

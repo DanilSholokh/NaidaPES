@@ -25,8 +25,6 @@ public class HandlerCards : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     private Camera uiCamera;
 
-    private ManagerField battlefield;
-
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>(); // Получаем RectTransform
@@ -86,7 +84,7 @@ public class HandlerCards : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         if (panelSelectCards == null)
         {
 
-            if (cardManager._handPlaceCards.Field.FieldController.IsCardOverBattlefield(transform.position) /*&& cardManager.card.*/) // if card played on battlegrounde
+            if (cardManager._handPlaceCards.Field.isfieldPlayCard(cardManager)) // if card played on battlegrounde
             {
                 Debug.Log("card on battle field");
                 cardManager.PlayCard();
@@ -126,16 +124,6 @@ public class HandlerCards : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         }
 
     }
-
-    //private bool IsCardOverBattlefield()
-    //{
-    //    // Перетворюємо позицію карти в координати екрану перед перевіркою
-    //    return RectTransformUtility.RectangleContainsScreenPoint(
-    //        battlefieldRect,
-    //        Camera.main.WorldToScreenPoint(rectTransform.position),
-    //        Camera.main
-    //    );
-    //}
 
 
 }

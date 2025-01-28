@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 6
   name: Disgust
   spriteCard: {fileID: 21300000, guid: 59dd34461ab7bcc438cb6b20533edbec, type: 3}
-  powerCard: 161
+  powerCreature: 57
   faceDamage: 3
   creatureType: 1

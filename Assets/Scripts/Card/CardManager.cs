@@ -49,7 +49,7 @@ public class CardManager : MonoBehaviour
     {
         if (gameManager.currentPlayer != null)
         {
-            gameManager.playCardOnField(this);
+            player.PlayCard(this);
         }
 
 

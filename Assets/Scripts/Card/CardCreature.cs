@@ -4,7 +4,7 @@ using UnityEngine;
 public class CardCreature : CardData
 {
 
-    public int powerCard;
+    public int powerCreature;
     public int faceDamage;
 
 
@@ -17,7 +17,6 @@ public class CardCreature : CardData
     }
 
     public CreatureType creatureType;
-
 
 
     public override BaseCardType getCardType()
@@ -39,5 +38,10 @@ public class CardCreature : CardData
     {
         Debug.Log("Play card is name " + name);
         
+    }
+
+    public override int getPowerCard()
+    {
+        return powerCreature;
     }
 }

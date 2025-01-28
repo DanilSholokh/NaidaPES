@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 2
   name: Call of North See
   spriteCard: {fileID: 21300000, guid: aac29160203c1364f839f1d185c7718a, type: 3}
-  powerCard: 812
+  powerCreature: 100
   faceDamage: 1
   creatureType: 0

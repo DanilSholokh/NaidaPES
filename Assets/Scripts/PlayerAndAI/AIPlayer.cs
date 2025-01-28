@@ -3,10 +3,6 @@
 public class AIPlayer : PlayerBase
 {
 
-
-
-
-
     public override void logicDrawCard()
     {
         hand.addHandCards(deck.getUpCard(), this);

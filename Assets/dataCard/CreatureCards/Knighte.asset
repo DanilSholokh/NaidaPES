@@ -15,7 +15,6 @@ MonoBehaviour:
   id: 0
   name: Knight
   spriteCard: {fileID: 21300000, guid: e11baddd7f00ec54998a1d3f11afd114, type: 3}
-  manager: {fileID: 4396372603025098944, guid: e1ad82127fa3ef143923800b29e3cf16, type: 3}
-  powerCard: 577
+  powerCreature: 207
   faceDamage: 2
   creatureType: 2

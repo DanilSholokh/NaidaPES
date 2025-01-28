@@ -19,8 +19,6 @@ namespace Assets.Scripts.BattlefieldSystem
 
         [SerializeField] GameManager gameManager;
 
-        public FieldController FieldController { get { return fieldController; } }
-        public CardFieldHandler CardField { get { return cardField; } }
 
 
         private void Start()
@@ -32,12 +30,14 @@ namespace Assets.Scripts.BattlefieldSystem
 
 
 
-        public bool fieldPlayCard(CardManager cardManager)
+        public bool isfieldPlayCard(CardManager cardManager)
         {
 
-            if (FieldController.IsCardOverBattlefield(cardManager.transform.position))
+            if (fieldController.IsCardOverBattlefield(cardManager.transform.position))
             {
+
                 return true;
+
             }
 
             Debug.Log("field false");
@@ -46,6 +46,23 @@ namespace Assets.Scripts.BattlefieldSystem
 
 
         }
+
+
+        
+        public void carate(CardManager cardManager)
+        {
+            if (cardManager.player is Player)
+            {
+                uiFieldController.changePlayerPowerText(cardManager.card.getPowerCard());
+            }
+            else
+            {
+                uiFieldController.changeEnemyPowerText(cardManager.card.getPowerCard());
+            }
+             
+        }
+
+
 
 
     }

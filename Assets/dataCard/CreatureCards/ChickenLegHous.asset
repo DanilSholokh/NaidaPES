@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 4
   name: ChickenLegHous
   spriteCard: {fileID: 21300000, guid: 809c15565c5953246a78d66b711c1f1d, type: 3}
-  powerCard: 361
+  powerCreature: 212
   faceDamage: 2
   creatureType: 1

@@ -15,6 +15,6 @@ MonoBehaviour:
   id: 1
   name: Necromancer
   spriteCard: {fileID: 21300000, guid: 0ae2cada06ce0724a9f7368084b20b0f, type: 3}
-  powerCard: 111
+  powerCreature: 180
   faceDamage: 3
   creatureType: 1
