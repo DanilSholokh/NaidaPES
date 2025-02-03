@@ -12,7 +12,11 @@ public abstract class PlayerBase : MonoBehaviour
     public ManagerCostPlayerSystem costsSystem;
 
 
+    private int powerPlayer = 0;
+
     protected IGamePlayState currentState;
+
+    public int PowerPlayer { get => powerPlayer; set => powerPlayer = value; }
 
     public virtual void SetState(IGamePlayState newState)
     {
@@ -54,7 +58,7 @@ public abstract class PlayerBase : MonoBehaviour
     public abstract void logicPlayCard(CardManager cardManager);
     public abstract void logicDrawCard();
 
-
+    public abstract void setPower(CardData card);
 
 
 }

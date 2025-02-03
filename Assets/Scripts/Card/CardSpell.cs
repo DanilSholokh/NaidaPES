@@ -31,13 +31,10 @@ public class CardSpell : CardData
         }
     }
 
-    public void setSpellCardData()
-    {
 
-    }
-
-    public override void PlayCard()
+    public override void PlayCard(PlayerBase playerBase)
     {
+        playerBase.setPower(this);
         Debug.Log("Play spell name is " + name);
     }
 
@@ -48,6 +45,13 @@ public class CardSpell : CardData
 
     public override bool isCountCost(PlayerBase player)
     {
-        return player.spellCostUpdate(cost);
+        return player.spellCostUpdate(getCostCard());
     }
+
+    public override int getAddPowerCard(int power)
+    {
+        return power += getPowerCard();
+    }
+
+    
 }

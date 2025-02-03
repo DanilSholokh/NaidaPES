@@ -3,32 +3,72 @@
   "WorkspaceRootPath": "D:\\hub project(not porn)\\Job\\Footbal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\managerfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\managerfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\fieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\fieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\playerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\playerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|d:\\hub project(not porn)\\job\\footbal\\assets\\scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardspell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardspell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\aiplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\aiplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardcreature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardcreature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|d:\\hub project(not porn)\\job\\footbal\\assets\\scripts\\playerandai\\playerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\playerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\stateplayer\\playerturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\stateplayer\\playerturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\stateplayer\\enemyturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\stateplayer\\enemyturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\handlercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\handlercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\createcardfolder\\generatecardpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\createcardfolder\\generatecardpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\managerfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\managerfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\costcardsystem\\managercostplayersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\costcardsystem\\managercostplayersystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\uifieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\uifieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\calculatefieldrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\calculatefieldrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\fieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\fieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\costcardsystem\\costcardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,30 +83,6 @@
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bandcamp\\poolscardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\uifieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\uifieldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\stateplayer\\playerturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\stateplayer\\playerturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\handlercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\handlercards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\battlefieldsystem\\cardfieldhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\battlefieldsystem\\cardfieldhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardcreature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardcreature.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\testingscripts\\testtriggerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\testingscripts\\testtriggerscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -79,16 +95,8 @@
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\costcardsystem\\playercostcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\cardspell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\cardspell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\createcardfolder\\createcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\createcardfolder\\createcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\card\\carddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\card\\uicardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,16 +127,8 @@
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cardplace\\handplacecards.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\playerandai\\stateplayer\\enemyturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerandai\\stateplayer\\enemyturnstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\manager\\playmodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\playmodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\createcardfolder\\generatecardpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\createcardfolder\\generatecardpool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{575EC4AC-4798-7D73-155A-FFF3776BC16A}|Assembly-CSharp.csproj|D:\\hub project(not porn)\\Job\\Footbal\\assets\\scripts\\takecard\\selectcardslibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -166,11 +166,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 23,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "PlayerCostController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\PlayerCostController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\PlayerCostController.cs",
@@ -182,29 +182,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "ManagerCostPlayerSystem.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\ManagerCostPlayerSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\ManagerCostPlayerSystem.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\ManagerCostPlayerSystem.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\ManagerCostPlayerSystem.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAADgvzIAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T12:52:06.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T12:52:06.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "CostCardUI.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\CostCardUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\CostCardUI.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\CostCardUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\CostCardSystem\\CostCardUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwBcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-31T12:44:00.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-31T12:44:00.848Z"
             },
             {
               "$type": "Document",
@@ -220,19 +218,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CardFieldHandler.cs",
-              "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\CardFieldHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\BattlefieldSystem\\CardFieldHandler.cs",
-              "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\CardFieldHandler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\BattlefieldSystem\\CardFieldHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 15,
+              "Title": "CalculateFieldRule.cs",
+              "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\CalculateFieldRule.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BattlefieldSystem\\CalculateFieldRule.cs",
+              "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\CalculateFieldRule.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BattlefieldSystem\\CalculateFieldRule.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T08:30:02.107Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "FieldController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\FieldController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BattlefieldSystem\\FieldController.cs",
@@ -240,12 +238,11 @@
               "RelativeToolTip": "Assets\\Scripts\\BattlefieldSystem\\FieldController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T01:29:04.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T01:29:04.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "UICardController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\UICardController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\UICardController.cs",
@@ -257,29 +254,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "UIFieldController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\UIFieldController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BattlefieldSystem\\UIFieldController.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\UIFieldController.cs",
               "RelativeToolTip": "Assets\\Scripts\\BattlefieldSystem\\UIFieldController.cs",
-              "ViewState": "AQIAAHkAAAAAAAAAAAAiwJYAAAA9AAAA",
+              "ViewState": "AQIAAIMAAAAAAAAAAAAuwAcAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T22:09:52.208Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T22:09:52.208Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
               "Title": "ManagerField.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\ManagerField.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BattlefieldSystem\\ManagerField.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\BattlefieldSystem\\ManagerField.cs",
               "RelativeToolTip": "Assets\\Scripts\\BattlefieldSystem\\ManagerField.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAQwCsAAAAAAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAcwGUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T21:57:14.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-23T21:57:14.383Z"
             },
             {
               "$type": "Document",
@@ -319,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 9,
               "Title": "HandlerCards.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\HandlerCards.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\HandlerCards.cs",
@@ -327,11 +322,12 @@
               "RelativeToolTip": "Assets\\Scripts\\Card\\HandlerCards.cs",
               "ViewState": "AQIAAEIAAAAAAAAAAADgv1YAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-03T13:12:42.656Z"
+              "WhenOpened": "2024-10-03T13:12:42.656Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "HandPlaceCards.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\CardPlace\\HandPlaceCards.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CardPlace\\HandPlaceCards.cs",
@@ -343,7 +339,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "PrefabCardController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PrefabCard\\PrefabCardController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PrefabCard\\PrefabCardController.cs",
@@ -355,7 +351,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "PlayerCardLibrary.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\LibrarryCards\\PlayerCardLibrary.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LibrarryCards\\PlayerCardLibrary.cs",
@@ -367,7 +363,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "GameCardsLibrary.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\LibrarryCards\\GameCardsLibrary.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LibrarryCards\\GameCardsLibrary.cs",
@@ -379,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "DeckLibrary.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\LibrarryCards\\DeckLibrary.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LibrarryCards\\DeckLibrary.cs",
@@ -391,7 +387,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "CreateCard.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\CreateCardFolder\\CreateCard.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CreateCardFolder\\CreateCard.cs",
@@ -403,7 +399,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "WaitingState.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\StatePlayer\\WaitingState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\WaitingState.cs",
@@ -411,68 +407,69 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\WaitingState.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T11:16:02.395Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-13T11:16:02.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 7,
               "Title": "EnemyTurnState.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\StatePlayer\\EnemyTurnState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\EnemyTurnState.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\StatePlayer\\EnemyTurnState.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\EnemyTurnState.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAMAAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T11:14:37.11Z"
+              "WhenOpened": "2024-09-13T11:14:37.11Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 6,
               "Title": "PlayerTurnState.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\StatePlayer\\PlayerTurnState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\PlayerTurnState.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\StatePlayer\\PlayerTurnState.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\StatePlayer\\PlayerTurnState.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T11:13:45.887Z"
+              "WhenOpened": "2024-09-13T11:13:45.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AIPlayer.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\AIPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\AIPlayer.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\AIPlayer.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\AIPlayer.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAowCYAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwBUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T10:50:25.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\Player.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\Player.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAADgvycAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T10:49:09.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PlayerBase.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\PlayerBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerAndAI\\PlayerBase.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\PlayerAndAI\\PlayerBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerAndAI\\PlayerBase.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wDkAAAAAAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAswBsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-13T10:31:34.607Z",
               "EditorCaption": ""
@@ -491,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "PlayModeManager.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Manager\\PlayModeManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\PlayModeManager.cs",
@@ -503,68 +500,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Manager\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\GameManager.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Manager\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Manager\\GameManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAZAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAArwDIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-09T10:37:07.62Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-09T10:37:07.62Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 1,
               "Title": "CardSpell.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardSpell.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\CardSpell.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardSpell.cs",
               "RelativeToolTip": "Assets\\Scripts\\Card\\CardSpell.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAowDUAAAAAAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAA5wB8AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T02:52:10.429Z"
+              "WhenOpened": "2024-08-31T02:52:10.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 3,
               "Title": "CardCreature.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardCreature.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\CardCreature.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardCreature.cs",
               "RelativeToolTip": "Assets\\Scripts\\Card\\CardCreature.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAkwDEAAAA2AAAA",
+              "ViewState": "AQIAABcAAAAAAAAAAAAUwDEAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-31T02:48:18.69Z"
+              "WhenOpened": "2024-08-31T02:48:18.69Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 4,
               "Title": "CardData.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\CardData.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardData.cs",
               "RelativeToolTip": "Assets\\Scripts\\Card\\CardData.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwCoAAAAUAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAYwB4AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-29T11:55:01.852Z"
+              "WhenOpened": "2024-08-29T11:55:01.852Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 8,
               "Title": "CardManager.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\CardManager.cs",
               "ToolTip": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\Card\\CardManager.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAqwDQAAAAVAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAqwDQAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-28T16:28:23.432Z"
+              "WhenOpened": "2024-08-28T16:28:23.432Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "SelectCardsCreator.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\TakeCard\\SelectCardsCreator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TakeCard\\SelectCardsCreator.cs",
@@ -576,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "PoolsCardController.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Bandcamp\\PoolsCardController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Bandcamp\\PoolsCardController.cs",
@@ -584,8 +584,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Bandcamp\\PoolsCardController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-25T00:28:51.353Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-25T00:28:51.353Z"
             },
             {
               "$type": "Document",
@@ -601,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 10,
               "Title": "GenerateCardPool.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\CreateCardFolder\\GenerateCardPool.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CreateCardFolder\\GenerateCardPool.cs",
@@ -609,11 +608,12 @@
               "RelativeToolTip": "Assets\\Scripts\\CreateCardFolder\\GenerateCardPool.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-24T14:50:33.042Z"
+              "WhenOpened": "2024-08-24T14:50:33.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "CardPickManager.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\Card\\CardPickManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Card\\CardPickManager.cs",
@@ -625,7 +625,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "testTriggerScript.cs",
               "DocumentMoniker": "D:\\hub project(not porn)\\Job\\Footbal\\Assets\\Scripts\\TestingScripts\\testTriggerScript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\TestingScripts\\testTriggerScript.cs",

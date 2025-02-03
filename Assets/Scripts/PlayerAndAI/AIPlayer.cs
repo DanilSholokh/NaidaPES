@@ -10,7 +10,16 @@ public class AIPlayer : PlayerBase
 
     public override void logicPlayCard(CardManager cardManager)
     {
-        throw new System.NotImplementedException();
+        CardData card = cardManager.card;
+
+        if (card.isCountCost(this))
+        {
+
+            card.PlayCard(this);
+            cardManager.deleteCard();
+
+        }
+
     }
 
 
@@ -55,7 +64,9 @@ public class AIPlayer : PlayerBase
 
     }
 
-
-
-
+    public override void setPower(CardData card)
+    {
+        PowerPlayer = gameManager.managerField.getEnemyPower();
+        gameManager.managerField.setPowerStatusEnemy(card.getAddPowerCard(PowerPlayer));
+    }
 }

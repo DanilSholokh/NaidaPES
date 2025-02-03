@@ -34,10 +34,12 @@ public class CardCreature : CardData
         }
     }
 
-    public override void PlayCard()
+
+
+    public override void PlayCard(PlayerBase playerBase)
     {
-        Debug.Log("Play card is name " + name);
-        
+        playerBase.setPower(this);
+        Debug.Log("Plaing Card Creature" + name);
     }
 
     public override int getPowerCard()
@@ -49,4 +51,11 @@ public class CardCreature : CardData
     {
         return player.creatureCostUpdate(getCostCard());
     }
+
+    public override int getAddPowerCard(int power)
+    {
+        return power = getPowerCard();
+    }
+
+    
 }

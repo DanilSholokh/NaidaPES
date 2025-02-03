@@ -14,9 +14,8 @@ public class Player : PlayerBase
         {
             if (card.isCountCost(this))
             {
-                gameManager.setfieldUI(cardManager);
-                
-                card.PlayCard();
+
+                card.PlayCard(this);
                 cardManager.deleteCard();
             
             }
@@ -43,5 +42,9 @@ public class Player : PlayerBase
         base.SetState(newState);
     }
 
-
+    public override void setPower(CardData card)
+    {
+        PowerPlayer = gameManager.managerField.getPlayerPower();
+        gameManager.managerField.setPowerStatusPlayer(card.getAddPowerCard(PowerPlayer));
+    }
 }   

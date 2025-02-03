@@ -102,7 +102,7 @@ namespace Assets.Scripts.BattlefieldSystem
 
         public Transform setEnemySpell()
         {
-            return playerPlaceSpell; // change s[ell place for enemy
+            return enemyPlaceSpell;
         }
 
         public void resetPlayerSpell(int index)

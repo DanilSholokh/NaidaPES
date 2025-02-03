@@ -22,10 +22,10 @@ public abstract class CardData : ScriptableObject
     }
 
     public abstract BaseCardType getCardType();
-    public abstract void PlayCard();
+    public abstract void PlayCard(PlayerBase playerBase);
     public abstract int getPowerCard();
     public abstract bool isCountCost(PlayerBase player);
-
+    public abstract int getAddPowerCard(int power);
 
     public Sprite getSpriteDataCard()
     {
