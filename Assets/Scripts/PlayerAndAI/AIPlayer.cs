@@ -28,6 +28,15 @@ public class AIPlayer : PlayerBase
         // Логіка вибору дії AI
         Debug.Log("Ai turn ");
         DrawCard();
+
+        //resetToMaxCountCost();
+        endTurn();
+
+    }
+
+    private void endTurn()
+    {
+        resetMaxCosts();
         EndTurn();
     }
 
@@ -37,7 +46,7 @@ public class AIPlayer : PlayerBase
 
         PoolsCardController poolsCardController = PoolsCardController.Instance;
 
-        for (int i = 0; i < deckSize; i++)
+        for (int i = 0; i < costsSystem.getDeckSize(); i++)
         {
             deck.addCard(poolsCardController.getRandomGameCard());
         }

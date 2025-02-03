@@ -84,12 +84,7 @@ public class HandlerCards : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         if (panelSelectCards == null)
         {
 
-            if (cardManager._handPlaceCards.Field.isfieldPlayCard(cardManager)) // if card played on battlegrounde
-            {
-                Debug.Log("card on battle field");
-                cardManager.PlayCard();
-                //return;
-            }
+            cardManager.PlayCard();
 
             // Reset size and position, and restore sibling index
             rectTransform.localScale = originalScale;

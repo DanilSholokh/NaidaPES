@@ -1,3 +1,4 @@
+using Assets.Scripts.BattlefieldSystem;
 using UnityEngine;
 
 // установлює інформацію про карту в візуальний формат
@@ -52,9 +53,6 @@ public class CardManager : MonoBehaviour
             player.PlayCard(this);
         }
 
-
-
-
     }
 
     public void deleteCard()
@@ -63,6 +61,10 @@ public class CardManager : MonoBehaviour
     }
 
 
+    private int getCardPower()
+    {
+        return card.getPowerCard();
+    }
 
 
 }

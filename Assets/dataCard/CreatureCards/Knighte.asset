@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 0
   name: Knight
   spriteCard: {fileID: 21300000, guid: e11baddd7f00ec54998a1d3f11afd114, type: 3}
+  cost: 1
   powerCreature: 207
   faceDamage: 2
   creatureType: 2

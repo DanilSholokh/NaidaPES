@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.BattlefieldSystem;
+using UnityEngine;
 
 public abstract class PlayerBase : MonoBehaviour
 {
@@ -8,15 +9,8 @@ public abstract class PlayerBase : MonoBehaviour
     public DeckLibrary deck;
     public HandPlaceCards hand;
 
+    public ManagerCostPlayerSystem costsSystem;
 
-    // ======== Count Play Card
-    public int maxCountPlayCreature = 1;
-    public int maxCountPlaySpell = 1;
-    public int currentPlayCreature = 0;
-    public int currentPlaySpell = 0;
-
-    //========== Count Deck
-    public int deckSize = 9;
 
     protected IGamePlayState currentState;
 
@@ -36,15 +30,26 @@ public abstract class PlayerBase : MonoBehaviour
     }
 
     public virtual void EndTurn()
-    { 
+    {
         currentState.EndTurn(this);
     }
 
-    public void resetCountPlayCard()
+
+    public bool creatureCostUpdate(int cost)
     {
-        currentPlayCreature = maxCountPlayCreature;
-        currentPlaySpell = maxCountPlaySpell;
+        return costsSystem.isCostCreature(cost);
     }
+
+    public bool spellCostUpdate(int cost)
+    {
+        return costsSystem.isCostSpell(cost);
+    }
+
+    public void resetMaxCosts()
+    {
+        costsSystem.resetToMaxCountCost();
+    }
+
 
     public abstract void logicPlayCard(CardManager cardManager);
     public abstract void logicDrawCard();

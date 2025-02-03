@@ -5,10 +5,24 @@ public class Player : PlayerBase
 {
 
 
+
     public override void logicPlayCard(CardManager cardManager)
     {
-        cardManager.card.PlayCard();
-        cardManager.deleteCard();
+        CardData card = cardManager.card;
+
+        if (gameManager.isCheckCardOnField(cardManager.transform.position))
+        {
+            if (card.isCountCost(this))
+            {
+                gameManager.setfieldUI(cardManager);
+                
+                card.PlayCard();
+                cardManager.deleteCard();
+            
+            }
+            
+        }
+        
     }
 
     public override void logicDrawCard()
@@ -19,6 +33,7 @@ public class Player : PlayerBase
 
     public void endTurn()
     {
+        resetMaxCosts();
         EndTurn();
     }
 

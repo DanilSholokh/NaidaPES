@@ -44,4 +44,9 @@ public class CardCreature : CardData
     {
         return powerCreature;
     }
+
+    public override bool isCountCost(PlayerBase player)
+    {
+        return player.creatureCostUpdate(getCostCard());
+    }
 }

@@ -15,5 +15,6 @@ MonoBehaviour:
   id: 3
   name: Rune Sword
   spriteCard: {fileID: 21300000, guid: 5fe30da776cb37442b7833193d37a14c, type: 3}
+  cost: 1
   powerSpell: 100
   spellType: 2

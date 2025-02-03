@@ -8,27 +8,30 @@ public class GameManager : MonoBehaviour
     public AIPlayer aiPlayer;
     public PlayerBase currentPlayer;
     
-    //public ManagerField managerField;
+    public ManagerField managerField;
 
 
 
     public void gameStart()
     {
-
+        humanPlayer.resetMaxCosts();
+        aiPlayer.resetMaxCosts();
         aiPlayer.createAIDeck();
         // create player handle card
 
         humanPlayer.deck.shuffleDeck();
         aiPlayer.deck.shuffleDeck();
-        startHumanTurn();
 
+        startHumanTurn();
         
+
 
 
     }
 
     public void SwitchTurn()
     {
+
         if (currentPlayer == humanPlayer)
         {
             currentPlayer = aiPlayer; // Передача ходу AI
@@ -40,30 +43,30 @@ public class GameManager : MonoBehaviour
             currentPlayer.SetState(new PlayerTurnState());
         }
 
+
     }
+
+    public void setfieldUI(CardManager cardManager)
+    {
+        managerField.setfieldUpdate(cardManager);
+    }
+
+    public bool isCheckCardOnField(Vector3 positionCard)
+    {
+        return managerField.isfieldPlayCard(positionCard);
+    }    
 
     private void startHumanTurn()
     {
         currentPlayer = humanPlayer; // Передача ходу гравцю
-        currentPlayer.SetState(new PlayerTurnState());
-        humanPlayer.currentPlayCreature = humanPlayer.maxCountPlayCreature; 
+        currentPlayer.SetState(new PlayerTurnState()); 
 
     }
 
 
-    //public void playCardOnField(CardManager cardManager)
-    //{
-        
-    //    if (managerField.isfieldPlayCard(cardManager))
-    //    {
-    //        Debug.Log("card on battle field 2");
-    //        cardManager.player.PlayCard(cardManager);
 
-    //    }
+    
 
-
-        
-    //}
 
 
 

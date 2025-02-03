@@ -23,8 +23,14 @@ namespace Assets.Scripts.BattlefieldSystem
         [SerializeField] Transform playerPlaceDamageIcone;
         [SerializeField] Transform enemyPlaceDamageIcone;
 
+
+
         private List<Image> playerDamageIcones = new List<Image>();
         private List<Image> enemyDamageIcones = new List<Image>();
+
+
+
+        
 
 
         // damage icone ui

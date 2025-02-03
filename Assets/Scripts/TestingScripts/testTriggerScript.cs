@@ -42,7 +42,7 @@ public class testTriggerScript : MonoBehaviour
 
     public void switchTurn()
     {
-        player.EndTurn();
+        player.endTurn();
     }
 
 

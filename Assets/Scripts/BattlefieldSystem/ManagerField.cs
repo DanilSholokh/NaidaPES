@@ -28,19 +28,16 @@ namespace Assets.Scripts.BattlefieldSystem
         
         }
 
-
-
-        public bool isfieldPlayCard(CardManager cardManager)
+        public bool isfieldPlayCard(Vector3 position)
         {
 
-            if (fieldController.IsCardOverBattlefield(cardManager.transform.position))
+            if (fieldController.IsCardOverBattlefield(position))
             {
-
+ 
                 return true;
 
             }
 
-            Debug.Log("field false");
 
             return false;
 
@@ -48,8 +45,7 @@ namespace Assets.Scripts.BattlefieldSystem
         }
 
 
-        
-        public void carate(CardManager cardManager)
+        public void setfieldUpdate(CardManager cardManager) // update power 
         {
             if (cardManager.player is Player)
             {
@@ -61,8 +57,6 @@ namespace Assets.Scripts.BattlefieldSystem
             }
              
         }
-
-
 
 
     }

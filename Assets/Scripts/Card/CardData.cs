@@ -10,7 +10,8 @@ public abstract class CardData : ScriptableObject
 
     public string name; 
     public Sprite spriteCard;
-    
+
+    public int cost;
 
     public enum BaseCardType
     {
@@ -23,6 +24,8 @@ public abstract class CardData : ScriptableObject
     public abstract BaseCardType getCardType();
     public abstract void PlayCard();
     public abstract int getPowerCard();
+    public abstract bool isCountCost(PlayerBase player);
+
 
     public Sprite getSpriteDataCard()
     {
@@ -35,7 +38,10 @@ public abstract class CardData : ScriptableObject
         return name;
     }
 
-
+    public int getCostCard()
+    {
+        return cost;
+    }
 
 
 }

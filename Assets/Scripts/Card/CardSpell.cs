@@ -45,4 +45,9 @@ public class CardSpell : CardData
     {
         return powerSpell;
     }
+
+    public override bool isCountCost(PlayerBase player)
+    {
+        return player.spellCostUpdate(cost);
+    }
 }
