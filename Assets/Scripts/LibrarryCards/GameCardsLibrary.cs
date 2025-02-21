@@ -49,8 +49,7 @@ public class GameCardsLibrary : MonoBehaviour
         }
     }
 
-
-    public List<CardData> findeListCards(List<int> cardsId) // переделать айди лист в кард лист
+    public List<CardData> findListCards(List<int> cardsId) // переделать айди лист в кард лист
     {
         List<CardData> cards = new List<CardData>();
 
@@ -76,15 +75,9 @@ public class GameCardsLibrary : MonoBehaviour
     }
 
     
-    public void getCardList(List<CardData> list) // get CARDS list
+    public List<CardData> getCardList() // get CARDS list
     {
-        list.Clear();
-
-        foreach (var card in cardsPool)
-        {
-            list.Add(card);
-        }
-
+        return cardsPool;
     }
 
 
@@ -102,51 +95,6 @@ public class GameCardsLibrary : MonoBehaviour
 
         return newList;
     }
-
-
-    public List<CardCreature> GetCreatureCards()
-    {
-
-        var newCardCreature = new List<CardCreature>();
-
-        if (cardsPool != null)
-        {
-            foreach (var card in cardsPool)
-            {
-                if (card is CardCreature creature)
-                {
-                    newCardCreature.Add(creature);
-                }
-            }
-        }
-
-        return newCardCreature;
-    
-    }
-
-
-    public List<CardSpell> GetSpellCards()
-    {
-
-        var newCardSpell = new List<CardSpell>();
-
-        if (cardsPool != null)
-        {
-            foreach (var card in cardsPool)
-            {
-                if (card is CardSpell spell)
-                {
-                    newCardSpell.Add(spell);
-                }
-            }
-        }
-
-        return newCardSpell;
-
-    }
-
-
-
 
 
 

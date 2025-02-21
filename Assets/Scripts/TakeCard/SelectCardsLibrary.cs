@@ -31,11 +31,13 @@ public class SelectCardsLibrary : SelectCardsCreator
         {
             deckLibrary.addCard(cardData);
             createTreeCard();
+
         }
         else
         {
             deckLibrary.addCard(cardData);
             Object.Destroy(panelTreeCardPrefab.gameObject);
+
         }
 
     }

@@ -4,7 +4,7 @@ public class PlayerTurnState : IGamePlayState
 {
     public void PlayCard(PlayerBase player, CardManager cardManager)
     {
-        
+
         player.logicPlayCard(cardManager);
 
 

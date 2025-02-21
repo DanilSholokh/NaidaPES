@@ -25,6 +25,12 @@ public class PlayerCardLibrary : MonoBehaviour
         List<int> allCards = new List<int>();
         gameCards.getIdCardList(allCards);
 
+        for (int i = 0; i < allCards.Count; i++)
+        {
+            Debug.Log(allCards[i]);
+        }
+
+
         foreach (int cardId in allCards)
         {
             if (PlayerPrefs.GetInt("DeckLibrary " + cardId, 0) == 1)

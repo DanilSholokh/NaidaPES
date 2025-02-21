@@ -3,6 +3,9 @@
 public class AIPlayer : PlayerBase
 {
 
+
+    [SerializeField] private AiBrainManager brain;
+
     public override void logicDrawCard()
     {
         hand.addHandCards(deck.getUpCard(), this);
@@ -37,13 +40,14 @@ public class AIPlayer : PlayerBase
         // Логіка вибору дії AI
         Debug.Log("Ai turn ");
         DrawCard();
+        //logicPlayCard(hand.);
 
-        //resetToMaxCountCost();
+
         endTurn();
 
     }
 
-    private void endTurn()
+    public void endTurn()
     {
         resetMaxCosts();
         EndTurn();

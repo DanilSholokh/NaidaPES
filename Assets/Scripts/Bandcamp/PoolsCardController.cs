@@ -11,8 +11,10 @@ public class PoolsCardController : MonoBehaviour
     private PlayerCardLibrary playerLibrary;
     
     public DeckLibrary deckLibrary;
-    public HandPlaceCards handPlaceCardsPlayer;
-    public HandPlaceCards handPlaceCardsPlayerTwo;
+    public DeckLibrary botDeckLibrary; 
+
+    public HandPlaceManager handPlacePlayer;
+    public HandPlaceManager handPlaceAI;
 
 
     private void Awake()
@@ -29,9 +31,22 @@ public class PoolsCardController : MonoBehaviour
         }
 
 
-        gameLibrary = GetComponent<GameCardsLibrary>();
+        gameLibrary = GetComponent<GameCardsLibrary>(); 
         playerLibrary = GetComponent<PlayerCardLibrary>();
 
+    }
+
+
+    public List<CardData> listManagerCardConvertToCardData(List<CardManager> cards)
+    {
+        List<CardData> cardsData = new List<CardData>();
+
+        for (int i = 0; i > cards.Count; i++)
+        {
+            cardsData.Add(cards[i].card);
+        }
+
+        return cardsData;
     }
 
 
@@ -40,11 +55,16 @@ public class PoolsCardController : MonoBehaviour
         return gameLibrary.getRandomCard();
     }
 
-    public CardData getRandomDeckCard()
+    public CardData getRandomDeckCardHuman()
     {
         return deckLibrary.getRandomCard();
     }
-    
+
+    public CardData getRandomDeckCardAI()
+    {
+        return botDeckLibrary.getRandomCard();
+    }
+
     public CardData getRandomPlayerCard()
     {
         return gameLibrary.findCard(playerLibrary.getRandomIdCard());
@@ -52,7 +72,7 @@ public class PoolsCardController : MonoBehaviour
 
     public List<CardData> getPoolPlayerCards() // get all player cards in list<CardData>
     { 
-        return gameLibrary.findeListCards(playerLibrary.getPlayerCards());
+        return gameLibrary.findListCards(playerLibrary.getPlayerCards());
     }
 
     public List<CardData> getPoolTypeCards(string typeCard)
@@ -60,20 +80,15 @@ public class PoolsCardController : MonoBehaviour
         return gameLibrary.getListTypeCards(typeCard);
     }
 
-    public List<CardCreature> getPoolCreature()
+    public List<CardSpell> getPoolAllSpells()
     {
-        return gameLibrary.GetCreatureCards();
+        return getPoolSpells(gameLibrary.getCardList());
     }
 
-    public List<CardSpell> getPoolSpells()
-    {
-        return gameLibrary.GetSpellCards();
-    }
-
-    public List<CardCreature> getPoolPowerCreaturesUp(int minPower)
+    public List<CardCreature> getPoolPowerCreaturesUp(int minPower, List<CardData> cards)
     {
 
-        List<CardCreature> creatures = getPoolCreature();
+        List<CardCreature> creatures = getPoolCreature(cards);
 
         for (int i = 0; i < creatures.Count; i++)
         {
@@ -88,10 +103,10 @@ public class PoolsCardController : MonoBehaviour
     }
 
 
-    public List<CardCreature> getPoolPowerCreaturesDown(int maxPower)
+    public List<CardCreature> getPoolPowerCreaturesDown(int maxPower, List<CardData> cards)
     {
 
-        List<CardCreature> creatures = getPoolCreature();
+        List<CardCreature> creatures = getPoolCreature(cards);
 
         for (int i = 0; i < creatures.Count; i++)
         {
@@ -107,10 +122,10 @@ public class PoolsCardController : MonoBehaviour
 
 
 
-    public List<CardSpell> getPoolPowerSpellsUp(int minPower)
+    public List<CardSpell> getPoolPowerSpellsUp(int minPower, List<CardData> cards)
     {
 
-        List<CardSpell> spells = getPoolSpells();
+        List<CardSpell> spells = getPoolSpells(cards);
 
         for (int i = 0; i < spells.Count; i++)
         {
@@ -125,10 +140,10 @@ public class PoolsCardController : MonoBehaviour
     }
 
 
-    public List<CardSpell> getPoolPowerSpellsDown(int maxPower)
+    public List<CardSpell> getPoolPowerSpellsDown(int maxPower, List<CardData> cards)
     {
 
-        List<CardSpell> spells = getPoolSpells();
+        List<CardSpell> spells = getPoolSpells(cards);
 
         for (int i = 0; i < spells.Count; i++)
         {
@@ -139,6 +154,47 @@ public class PoolsCardController : MonoBehaviour
         }
 
         return spells;
+
+    }
+
+    public List<CardCreature> getPoolCreature(List<CardData> cardsPool)
+    {
+
+        List<CardCreature> newCardCreature = new List<CardCreature>();
+
+        if (cardsPool != null)
+        {
+            foreach (var card in cardsPool)
+            {
+                if (card is CardCreature creature)
+                {
+                    newCardCreature.Add(creature);
+                }
+            }
+        }
+
+        return newCardCreature;
+
+    }
+
+
+    public List<CardSpell> getPoolSpells(List<CardData> cards)
+    {
+
+        List<CardSpell> newCardSpell = new List<CardSpell>();
+
+        if (cards != null)
+        {
+            foreach (var card in cards)
+            {
+                if (card is CardSpell spell)
+                {
+                    newCardSpell.Add(spell);
+                }
+            }
+        }
+
+        return newCardSpell;
 
     }
 

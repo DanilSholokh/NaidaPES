@@ -17,13 +17,13 @@ public class CreateCard
     // Метод для створення картки
     public CardManager CreateCardInstance(CardData card, Transform placeCard, PlayerBase playerBase)
     {
-        // Замість Instantiate ви можете створити об'єкт прямо
         CardManager managerCard = Object.Instantiate(cardManager, placeCard);
         managerCard.card = card;
         
         managerCard.setDataCard(playerBase);
 
         return managerCard;
+
     }
 
 

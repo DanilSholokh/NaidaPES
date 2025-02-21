@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-using UnityEngine.XR;
-
+﻿
 public class Player : PlayerBase
 {
 

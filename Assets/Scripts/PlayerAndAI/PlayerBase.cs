@@ -7,7 +7,7 @@ public abstract class PlayerBase : MonoBehaviour
     public GameManager gameManager; // Ссылка на игру для переключения хода
 
     public DeckLibrary deck;
-    public HandPlaceCards hand;
+    public HandPlaceManager hand;
 
     public ManagerCostPlayerSystem costsSystem;
 
@@ -17,6 +17,11 @@ public abstract class PlayerBase : MonoBehaviour
     protected IGamePlayState currentState;
 
     public int PowerPlayer { get => powerPlayer; set => powerPlayer = value; }
+
+    public abstract void logicPlayCard(CardManager cardManager);
+    public abstract void logicDrawCard();
+    public abstract void setPower(CardData card);
+
 
     public virtual void SetState(IGamePlayState newState)
     {
@@ -54,11 +59,6 @@ public abstract class PlayerBase : MonoBehaviour
         costsSystem.resetToMaxCountCost();
     }
 
-
-    public abstract void logicPlayCard(CardManager cardManager);
-    public abstract void logicDrawCard();
-
-    public abstract void setPower(CardData card);
 
 
 }

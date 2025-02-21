@@ -15,11 +15,11 @@ public class CardManager : MonoBehaviour
     private UICardController uiController;
     
     private GameManager gameManager;
-    private HandPlaceCards handPlace;
+    private HandPlaceManager handPlace;
 
     public PlayerBase player;
 
-    public HandPlaceCards _handPlaceCards { get => handPlace; set => handPlace = value; }
+    public HandPlaceManager _handPlaceCards { get => handPlace; set => handPlace = value; }
     public GameManager _gameManager { set => gameManager = value; }
 
     public void setDataCard(PlayerBase playerBase)

@@ -4,7 +4,7 @@ public class SelectCardsHands : SelectCardsCreator
 {
 
 
-    private HandPlaceCards HandPlace;
+    private HandPlaceManager HandPlace;
     int count = 0;
 
     public SelectCardsHands(PlayerBase playerBase ,int countCards) : base(playerBase)
@@ -24,7 +24,7 @@ public class SelectCardsHands : SelectCardsCreator
     public override void createPrefabPanel()
     {
         initClass(count);
-        HandPlace = createCard.poolsCard.handPlaceCardsPlayer;
+        HandPlace = createCard.poolsCard.handPlacePlayer;
 
         if (HandPlace != null)
         {
