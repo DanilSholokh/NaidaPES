@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerCostController : MonoBehaviour
+public class CostController : MonoBehaviour
 {
 
 
@@ -9,9 +9,6 @@ public class PlayerCostController : MonoBehaviour
     [SerializeField] private int maxCountPlaySpell = 1;
     [SerializeField] private int currentPlayCreature = 0;
     [SerializeField] private int currentPlaySpell = 0;
-
-    //========== Count Deck
-    [SerializeField] private int deckSize = 9;
 
 
 
@@ -69,10 +66,6 @@ public class PlayerCostController : MonoBehaviour
         return currentPlaySpell;
     }
 
-    public int getDeckSize()
-    {
-        return deckSize; 
-    }
 
     public void resetCountPlayCard()
     {

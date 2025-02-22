@@ -7,13 +7,13 @@ public class ManagerCostPlayerSystem : MonoBehaviour
 
 
     private CostCardUI costUI;
-    private PlayerCostController playerCost;
+    private CostController playerCost;
 
 
 
     private void Start()
     {
-        playerCost = GetComponent<PlayerCostController>();
+        playerCost = GetComponent<CostController>();
         costUI = GetComponent<CostCardUI>();
 
     }
@@ -62,11 +62,6 @@ public class ManagerCostPlayerSystem : MonoBehaviour
     }
 
 
-    
-    public int getDeckSize()
-    {
-        return playerCost.getDeckSize(); 
-    }
 
 
 }

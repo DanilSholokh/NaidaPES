@@ -44,5 +44,21 @@ namespace Assets.Scripts.BattlefieldSystem
             powerEnemy -= powerCard;
         }
 
+        public void zeroBothPlayers()
+        {
+            refreshPlayer();
+            refreshEnemy();
+        }
+
+        public void refreshPlayer()
+        {
+            powerPlayer = 0;
+        }    
+
+        public void refreshEnemy()
+        {
+            powerEnemy = 0; 
+        }
+
     }
 }

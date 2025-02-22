@@ -6,8 +6,20 @@ public class DeckLibrary : MonoBehaviour
 {
 
     [SerializeField] private List<CardData> deckCards = new List<CardData>();
+    
     [SerializeField] private int startSizeDeck = 20;
+    
+    PoolsCardController poolCards;
 
+    public int getSizeDeck()
+    {
+        return startSizeDeck;
+    }
+
+    public void setSizeDeck(int sizeDeck)
+    {
+        startSizeDeck = sizeDeck;
+    }    
 
     private bool IsDeckEmpty()
     {
@@ -18,6 +30,21 @@ public class DeckLibrary : MonoBehaviour
     {
         return deckCards.Count >= startSizeDeck;
     }
+
+
+    public void createDeck()
+    {
+
+        if (poolCards == null)
+        {
+            poolCards = PoolsCardController.Instance;
+        }
+
+        for (int i = 0; i < getSizeDeck(); i++)
+        {
+            addCard(poolCards.getRandomGameCard());
+        }
+    }   
 
     public void addCard(CardData cardData)
     {

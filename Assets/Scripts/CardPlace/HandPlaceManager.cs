@@ -15,6 +15,7 @@ public class HandPlaceManager : MonoBehaviour
 
 
     public int maxHandCard = 8;
+    public int sizeStartHand = 6;
     public List<CardManager> handCardsList = new List<CardManager>();
 
     private CreateCard createCard;
@@ -57,6 +58,15 @@ public class HandPlaceManager : MonoBehaviour
         handCardsList.Remove(card);
         StartCoroutine(animHand.DelayedCalculatePlaceCreateCard());
 
+    }
+
+
+    public void createStartHand(PlayerBase player, DeckLibrary deck)
+    {
+        for (int i = 0; i < sizeStartHand; i++)
+        {
+            addHandCards(deck.getUpCard(), player);
+        }
     }
 
 

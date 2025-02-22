@@ -1999,7 +1999,7 @@ MonoBehaviour:
   deck: {fileID: 1986684063}
   hand: {fileID: 1131226045}
   costsSystem: {fileID: 692474342}
-  brain: {fileID: 0}
+  brain: {fileID: 1505500312}
 --- !u!114 &671471854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5455,7 +5455,8 @@ MonoBehaviour:
   costSystem: {fileID: 692474342}
   handSystem: {fileID: 1131226045}
   deck: {fileID: 1986684063}
-  poolCards: {fileID: 0}
+  spells: []
+  creatures: []
 --- !u!1 &1675930097
 GameObject:
   m_ObjectHideFlags: 0

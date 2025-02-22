@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     {
         humanPlayer.resetMaxCosts();
         aiPlayer.resetMaxCosts();
-        aiPlayer.createAIDeck();
+        
+        aiPlayer.CreateDeck();
         // create player handle card
 
         humanPlayer.deck.shuffleDeck();

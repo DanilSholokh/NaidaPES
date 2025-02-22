@@ -8,7 +8,7 @@ public class AIPlayer : PlayerBase
 
     public override void logicDrawCard()
     {
-        hand.addHandCards(deck.getUpCard(), this);
+        brain.drawCard(this);
     }
 
     public override void logicPlayCard(CardManager cardManager)
@@ -53,20 +53,11 @@ public class AIPlayer : PlayerBase
         EndTurn();
     }
 
-
-    public void createAIDeck()
+    public void CreateDeck()
     {
-
-        PoolsCardController poolsCardController = PoolsCardController.Instance;
-
-        for (int i = 0; i < costsSystem.getDeckSize(); i++)
-        {
-            deck.addCard(poolsCardController.getRandomGameCard());
-        }
-
-        Debug.Log("BOT deck Complete");
-
-    }
+        brain.createDeck();
+        brain.createStartHand(this);
+    }    
 
     public override void setPower(CardData card)
     {
