@@ -15,7 +15,7 @@ public class SelectCardsLibrary : SelectCardsCreator
     public override void createPrefabPanel()
     {
         initClass(countSelectCards);
-        deckLibrary = createCard.poolsCard.deckLibrary;
+        deckLibrary = pools.deckLibrary;
 
         if (!deckLibrary.IsDeckFull())
         {

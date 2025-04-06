@@ -15,17 +15,16 @@ public class EnemyTurnState : IGamePlayState
         Debug.Log("Enemy draw cardManager");
 
         player.logicDrawCard();
-        
-
 
 
     }
 
     public void EndTurn(PlayerBase player)
     {
-        Debug.Log("Enemy end Turn");
+        player.logicEndTurn();
         player.SetState(new WaitingState()); // Переходимо до стану очікування
         player.gameManager.SwitchTurn(); // Передаємо хід іншому гравцю
+        Debug.Log("Enemy end Turn");
     }
 
 }

@@ -6,20 +6,27 @@ public class Player : PlayerBase
 
     public override void logicPlayCard(CardManager cardManager)
     {
-        CardData card = cardManager.card;
 
-        if (gameManager.isCheckCardOnField(cardManager.transform.position))
+        if (gameManager.ReferiSystem.isCheckCardOnField(cardManager.transform.position))
         {
-            if (card.isCountCost(this))
-            {
 
-                card.PlayCard(this);
-                cardManager.deleteCard();
-            
+            if (cardManager.isPlayCostsCard())
+            {
+                cardManager.PlayedCard();
+
+            }
+
+            if (cardManager.card.isCostPowerThanEnemyField(gameManager.ReferiSystem.getRefreshEnemyPower()))
+            {
+                
             }
             
+
+
         }
-        
+
+
+    
     }
 
     public override void logicDrawCard()
@@ -27,10 +34,14 @@ public class Player : PlayerBase
         hand.addHandCards(deck.getUpCard(), this);
     }
 
+    public override void logicEndTurn()
+    {
+        //resetMaxCosts();
+    }
+
 
     public void endTurn()
     {
-        resetMaxCosts();
         EndTurn();
     }
 
@@ -40,9 +51,16 @@ public class Player : PlayerBase
         base.SetState(newState);
     }
 
-    public override void setPower(CardData card)
+    public override void setPowerCreatures(CardData card)
     {
-        PowerPlayer = gameManager.managerField.getPlayerPower();
-        gameManager.managerField.setPowerStatusPlayer(card.getAddPowerCard(PowerPlayer));
+        gameManager.ReferiSystem.setCreaturePowerStatusPlayer(card);
     }
+
+    public override void setPowerSpells(CardData card)
+    {
+        gameManager.ReferiSystem.setSpellPowerStatusPlayer(card);
+        //gameManager.
+    }
+
+
 }   

@@ -95,15 +95,16 @@ namespace Assets.Scripts.BattlefieldSystem
 
 
         // set player spell UI
-        public Transform setPlayerSpell()
+        public Transform getPlayerSpell()
         {
             return playerPlaceSpell;
         }
 
-        public Transform setEnemySpell()
+        public Transform getEnemySpell()
         {
             return enemyPlaceSpell;
         }
+
 
         public void resetPlayerSpell(int index)
         {
@@ -153,7 +154,7 @@ namespace Assets.Scripts.BattlefieldSystem
 
         public void changeEnemyPowerText(int power)
         {
-            textPlayerCountPowerCard.text = power.ToString();
+            textEnemyCountPowerCard.text = power.ToString();
         }
 
         public void resetPowerText()

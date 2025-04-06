@@ -15,7 +15,7 @@ public class testTriggerScript : MonoBehaviour
     public void triggerBuy()
     {
 
-        int r_id = Random.Range(0, 6);
+        int r_id = Random.Range(0, Gcard.getCardList().Count + 1);
 
         Debug.Log("" + r_id + " card buy");
         Gcard.buyCards(r_id);
@@ -27,7 +27,7 @@ public class testTriggerScript : MonoBehaviour
     {
         
         
-        for (int i = 0; i < 34; i++)
+        for (int i = 0; i < Pcard.getPlayerCards().Count; i++)
         {
             Gcard.sellCards(i);
         }

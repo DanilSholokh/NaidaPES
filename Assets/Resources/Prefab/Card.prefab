@@ -883,14 +883,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f761d803168c14a9f0181c60f8ac63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHoverHeight: 50
+  maxHoverHeight: 1
   minHoverHeight: 3
   maxAnimationDuration: 7
   minAnimationDuration: 3
   maxRotate: 5
   minRotate: -5
-  returnHeightOffset: 10
-  returnAnimationDuration: 3
+  returnHeightOffset: 3
+  returnAnimationDuration: 4
 --- !u!114 &6472453283474287193
 MonoBehaviour:
   m_ObjectHideFlags: 0

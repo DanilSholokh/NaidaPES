@@ -8,16 +8,14 @@ public class GameManager : MonoBehaviour
     public AIPlayer aiPlayer;
     public PlayerBase currentPlayer;
     
-    public ManagerField managerField;
-
+    public ReferiController ReferiSystem;
+    
 
 
     public void gameStart()
     {
-        humanPlayer.resetMaxCosts();
-        aiPlayer.resetMaxCosts();
-        
-        aiPlayer.CreateDeck();
+        ReferiSystem.prepareGame(this);
+        aiPlayer.SetupGame();
         // create player handle card
 
         humanPlayer.deck.shuffleDeck();
@@ -35,40 +33,35 @@ public class GameManager : MonoBehaviour
 
         if (currentPlayer == humanPlayer)
         {
-            currentPlayer = aiPlayer; // Передача ходу AI
-            currentPlayer.SetState(new EnemyTurnState());
+            startAiTurn();
         }
         else
         {
-            currentPlayer = humanPlayer; // Передача ходу гравцю
-            currentPlayer.SetState(new PlayerTurnState());
+            startHumanTurn();
         }
 
 
     }
-
-    public void setfieldUI(CardManager cardManager)
-    {
-        managerField.setfieldUpdate(cardManager);
-    }
-
-    public bool isCheckCardOnField(Vector3 positionCard)
-    {
-        return managerField.isfieldPlayCard(positionCard);
-    }    
+    
 
     private void startHumanTurn()
     {
+        humanPlayer.UpdateDataTurn();
         currentPlayer = humanPlayer; // Передача ходу гравцю
         currentPlayer.SetState(new PlayerTurnState()); 
+        
+
+    }
+
+    private void startAiTurn()
+    {
+        aiPlayer.UpdateDataTurn();
+        currentPlayer = aiPlayer; // Передача ходу AI
+        currentPlayer.SetState(new EnemyTurnState());
 
     }
 
 
-
-    
-
-
-
+   
 
 }

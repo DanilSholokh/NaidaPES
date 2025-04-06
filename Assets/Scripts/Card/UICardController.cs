@@ -61,13 +61,13 @@ public class UICardController : MonoBehaviour
     {
         switch (cardData.getCardType())
         {
-            case CardData.BaseCardType.Naida:
+            case CardData.RaceCardType.Naida:
                 imageType.sprite = naydaTypeSprite;
                 break;
-            case CardData.BaseCardType.Evil:
+            case CardData.RaceCardType.Evil:
                 imageType.sprite = evilTypeSprite;
                 break;
-            case CardData.BaseCardType.Knight:
+            case CardData.RaceCardType.Knight:
                 imageType.sprite = knighteTypeSprite;
                 break;
             default:

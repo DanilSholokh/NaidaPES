@@ -1,3 +1,4 @@
+using DG.Tweening.Core.Easing;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New CardData", menuName = "CardCreature")]
@@ -9,36 +10,27 @@ public class CardCreature : CardData
 
 
 
-    public enum CreatureType
+    [SerializeField]
+    public RaceType raceType;
+
+    public override RaceCardType getCardType()
     {
-        Naida = BaseCardType.Naida,
-        Evil = BaseCardType.Evil,
-        Knight = BaseCardType.Knight
+        return (RaceCardType)raceType;
     }
 
-    public CreatureType creatureType;
+    [SerializeField]
+    public BaceType baceType;
 
-
-    public override BaseCardType getCardType()
+    public override BaceCardType getBaceType()
     {
-        switch (creatureType)
-        {
-            case CreatureType.Naida:
-                return BaseCardType.Naida;
-            case CreatureType.Evil:
-                return BaseCardType.Evil;
-            case CreatureType.Knight:
-                return BaseCardType.Knight;
-            default:
-                throw new System.ArgumentOutOfRangeException("Unknown creature type!");
-        }
+        return (BaceCardType)baceType;
     }
 
 
 
     public override void PlayCard(PlayerBase playerBase)
     {
-        playerBase.setPower(this);
+        playerBase.setPowerCreatures(this);
         Debug.Log("Plaing Card Creature" + name);
     }
 
@@ -52,10 +44,10 @@ public class CardCreature : CardData
         return player.creatureCostUpdate(getCostCard());
     }
 
-    public override int getAddPowerCard(int power)
+    public override bool isCostPowerThanEnemyField(int powerCreatureEnemy)
     {
-        return power = getPowerCard();
+        return getPowerCard() > powerCreatureEnemy;
     }
 
-    
+
 }

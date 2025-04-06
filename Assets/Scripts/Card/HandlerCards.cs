@@ -84,7 +84,7 @@ public class HandlerCards : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         if (panelSelectCards == null)
         {
 
-            cardManager.PlayCard();
+            cardManager.tryPlayCard();
 
             // Reset size and position, and restore sibling index
             rectTransform.localScale = originalScale;

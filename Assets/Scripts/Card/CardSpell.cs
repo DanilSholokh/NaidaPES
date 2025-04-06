@@ -1,42 +1,47 @@
 using UnityEngine;
 
+
+
+
 [CreateAssetMenu(fileName = "New CardData", menuName = "CardSpell")]
 public class CardSpell : CardData
 {
 
 
     public int powerSpell;
+    [SerializeField] private int countTurn;
 
-    public enum SpellType
+    [SerializeField]
+    public RaceType raceType;
+
+    public override RaceCardType getCardType()
     {
-        Naida = BaseCardType.Naida,
-        Evil = BaseCardType.Evil,
-        Knight = BaseCardType.Knight
+        return (RaceCardType)raceType;
     }
 
-    public SpellType spellType;
+    [SerializeField]
+    public BaceType baceType;
 
-    public override BaseCardType getCardType()
+    public override BaceCardType getBaceType()
     {
-        switch (spellType)
-        {
-            case SpellType.Naida:
-                return BaseCardType.Naida;
-            case SpellType.Evil:
-                return BaseCardType.Evil;
-            case SpellType.Knight:
-                return BaseCardType.Knight;
-            default:
-                throw new System.ArgumentOutOfRangeException("Unknown creature type!");
-        }
+        return (BaceCardType)baceType;
     }
-
 
     public override void PlayCard(PlayerBase playerBase)
     {
-        playerBase.setPower(this);
+        playerBase.setPowerSpells(this);
         Debug.Log("Play spell name is " + name);
     }
+
+
+
+    public int isHitTurn()
+    {
+        // every end turn trigger
+        return countTurn--;
+    }
+
+
 
     public override int getPowerCard()
     {
@@ -48,9 +53,9 @@ public class CardSpell : CardData
         return player.spellCostUpdate(getCostCard());
     }
 
-    public override int getAddPowerCard(int power)
+    public override bool isCostPowerThanEnemyField(int powerCreatureEnemy)
     {
-        return power += getPowerCard();
+        return true;
     }
 
     

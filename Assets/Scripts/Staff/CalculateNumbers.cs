@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayModeManager : MonoBehaviour
+public class CalculateNumbers : MonoBehaviour
 {
     
+
+
+
+    
+
+
+
+
+
 
 
 

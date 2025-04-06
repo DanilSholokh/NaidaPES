@@ -12,6 +12,7 @@ public abstract class SelectCardsCreator
 
     private List<CardManager> cardsTreeTableList;
     public CreateCard createCard;
+    public PoolsCardController pools;
 
     public PlayerBase playerBase;
     public int countCards;
@@ -29,6 +30,7 @@ public abstract class SelectCardsCreator
     {
         createCard = new CreateCard();
         cardsTreeTableList = new List<CardManager>();
+        pools = PoolsCardController.Instance;
 
         this.maxCountCard = maxCountCard;
 
@@ -83,6 +85,8 @@ public abstract class SelectCardsCreator
 
                 cardsTreeTableList.Add(cardManager);
                 cardManager.Handler.setPanelTreeCard(this);
+                cardManager.cardAnimation.StopAnimation();
+                
 
             }
 
@@ -101,7 +105,7 @@ public abstract class SelectCardsCreator
 
     public virtual CardData getCardData() // пул карт откуда будет братся карта 
     {
-        CardData cardData = createCard.poolsCard.getRandomPlayerCard();
+        CardData cardData = pools.getRandomPlayerCollectionsCard();
         return cardData;
     }
 

@@ -31,6 +31,10 @@ public class HandPlaceManager : MonoBehaviour
     }
 
 
+    public List<CardManager> getCardHand()
+    {
+        return handCardsList; 
+    }
 
 
     public void addHandCards(CardData card, PlayerBase playerBase)
@@ -42,6 +46,7 @@ public class HandPlaceManager : MonoBehaviour
         }
 
         CardManager cardManager = createCard.CreateCardInstance(card, animHand.handRectTransform, playerBase);
+
         cardManager._gameManager = gameManager;
         handCardsList.Add(cardManager);
 

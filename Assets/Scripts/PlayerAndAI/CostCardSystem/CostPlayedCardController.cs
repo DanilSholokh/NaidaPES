@@ -1,20 +1,22 @@
 using UnityEngine;
 
-public class CostController : MonoBehaviour
+public class CostPlayedCardController : MonoBehaviour
 {
 
 
     // ======== Count Play Card
     [SerializeField] private int maxCountPlayCreature = 1;
     [SerializeField] private int maxCountPlaySpell = 1;
+
     [SerializeField] private int currentPlayCreature = 0;
     [SerializeField] private int currentPlaySpell = 0;
 
 
 
+
     public bool isMinusCountPlaySpell(int cost)
     {
-        if (getCurrentSpell() >= cost)
+        if (getCurrentPlayedCostSpell() >= cost)
         {
             return true;
         }
@@ -25,7 +27,7 @@ public class CostController : MonoBehaviour
 
     public bool isMinusCountPlayCreature(int cost)
     {
-        if (getCurrentCreater() >= cost)
+        if (getCurrentPlayedCostCreater() >= cost)
         {
             return true;
         }
@@ -33,7 +35,7 @@ public class CostController : MonoBehaviour
         return false;
     }
 
-    public void minusCountSpell(int cost)
+    public void minusCountPlayedCostSpell(int cost)
     {
         if (isMinusCountPlaySpell(cost))
         {
@@ -41,7 +43,7 @@ public class CostController : MonoBehaviour
         }
     }
 
-    public void minusCountCraeature(int cost)
+    public void minusCountPlayedCostCraeature(int cost)
     {
         if (isMinusCountPlayCreature(cost))
         {
@@ -50,28 +52,27 @@ public class CostController : MonoBehaviour
         
     }
 
-    public int getMaxCreature()
+    public int getMaxPlayedCostCreature()
         { return maxCountPlayCreature; }
 
-    public int getMaxSpell() 
+    public int getMaxPlayedCostSpell() 
     { return maxCountPlaySpell; }
 
-    public int getCurrentCreater()
+    public int getCurrentPlayedCostCreater()
     {
         return currentPlayCreature;
     }
 
-    public int getCurrentSpell()
+    public int getCurrentPlayedCostSpell()
     {
         return currentPlaySpell;
     }
 
 
-    public void resetCountPlayCard()
+    public void resetCountPlayedCostCard()
     {
         currentPlayCreature = maxCountPlayCreature;
         currentPlaySpell = maxCountPlaySpell;
-
     }
 
 

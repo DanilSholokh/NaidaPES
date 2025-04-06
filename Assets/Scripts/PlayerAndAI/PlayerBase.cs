@@ -9,19 +9,19 @@ public abstract class PlayerBase : MonoBehaviour
     public DeckLibrary deck;
     public HandPlaceManager hand;
 
-    public ManagerCostPlayerSystem costsSystem;
+    public ManagerCostPlayedCardSystem costsSystem;
 
 
-    private int powerPlayer = 0;
+    //private int powerPlayerCreature = 0;
 
     protected IGamePlayState currentState;
 
-    public int PowerPlayer { get => powerPlayer; set => powerPlayer = value; }
 
     public abstract void logicPlayCard(CardManager cardManager);
     public abstract void logicDrawCard();
-    public abstract void setPower(CardData card);
-
+    public abstract void logicEndTurn();
+    public abstract void setPowerCreatures(CardData card);
+    public abstract void setPowerSpells(CardData card); 
 
     public virtual void SetState(IGamePlayState newState)
     {
@@ -44,6 +44,16 @@ public abstract class PlayerBase : MonoBehaviour
     }
 
 
+    public void UpdateDataTurn()
+    {
+        //update data
+        deck.resetCostToMaxDrawCard();
+        costsSystem.resetToMaxCountPlayedCost();
+        Debug.Log(this + " Start Turn");
+
+    }    
+
+
     public bool creatureCostUpdate(int cost)
     {
         return costsSystem.isCostCreature(cost);
@@ -54,10 +64,8 @@ public abstract class PlayerBase : MonoBehaviour
         return costsSystem.isCostSpell(cost);
     }
 
-    public void resetMaxCosts()
-    {
-        costsSystem.resetToMaxCountCost();
-    }
+
+
 
 
 

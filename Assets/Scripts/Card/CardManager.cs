@@ -33,27 +33,47 @@ public class CardManager : MonoBehaviour
 
             player = playerBase;
 
-            if (player is Player)
-            {
-                uiController.initIUdata(card);
-            }
-            else
-            {
-                uiController.activeCardBack();
-            }
+            
         }       
 
     }
 
+    public void isCreateLookDetect()
+    {
+        if (player is Player)
+        {
+            uiController.initIUdata(card);
+        }
+        else
+        {
+            uiController.activeCardBack();
+        }
+    }
 
-    public void PlayCard()
+    public void tryPlayCard()
     {
         if (gameManager.currentPlayer != null)
         {
             player.PlayCard(this);
+            return;
         }
 
+        Debug.Log("null player card");
+
     }
+
+    public bool isPlayCostsCard()
+    {
+        return card.isCountCost(player);
+    }
+
+
+    public void PlayedCard()
+    {
+        card.PlayCard(player);
+        deleteCard();
+    }
+
 
     public void deleteCard()
     {

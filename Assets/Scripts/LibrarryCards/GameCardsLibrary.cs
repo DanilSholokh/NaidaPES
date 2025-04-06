@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameCardsLibrary : MonoBehaviour
 {
 
-    [SerializeField] private List<CardData> cardsPool;
+    [SerializeField] private List<CardData> gameCardsPool;
 
     private Dictionary<int, CardData> cardDictionary;
 
@@ -13,9 +13,25 @@ public class GameCardsLibrary : MonoBehaviour
 
     private void Awake()
     {
+        AssignSequentialIDs();
+        InitializeDictionary();
+    }
+
+
+    private void AssignSequentialIDs()
+    {
+        for (int i = 0; i < gameCardsPool.Count; i++)
+        {
+            gameCardsPool[i].id = i + 1;
+        }
+    }
+
+
+    private void InitializeDictionary()
+    {
         cardDictionary = new Dictionary<int, CardData>();
 
-        foreach (var card in cardsPool)
+        foreach (var card in gameCardsPool)
         {
             if (!cardDictionary.ContainsKey(card.id))
             {
@@ -23,18 +39,12 @@ public class GameCardsLibrary : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("CardData with ID " + card.id + " already exists.");
+                Debug.LogWarning("CardData with duplicate ID: " + card.id);
             }
         }
     }
 
-    public CardData getRandomCard()
-    {
-        int r_num = Random.Range(0, cardsPool.Count);
 
-        return cardsPool[r_num];
-
-    }
 
     public CardData findCard(int id) // получить карту по айди (инту)
     {
@@ -67,7 +77,7 @@ public class GameCardsLibrary : MonoBehaviour
     {
         list.Clear();
 
-        foreach (var card in cardsPool)
+        foreach (var card in gameCardsPool)
         {
             list.Add(card.id);
         }
@@ -77,23 +87,7 @@ public class GameCardsLibrary : MonoBehaviour
     
     public List<CardData> getCardList() // get CARDS list
     {
-        return cardsPool;
-    }
-
-
-    public List<CardData> getListTypeCards(string cardType)
-    {
-        List<CardData> newList = new List<CardData>();
-
-        for (int i = 0; i < cardsPool.Count; i++)
-        {
-            if (cardsPool[i].getCardType().ToString() == cardType)
-            {
-                newList.Add(cardsPool[i]);
-            }
-        }
-
-        return newList;
+        return gameCardsPool;
     }
 
 
@@ -105,10 +99,10 @@ public class GameCardsLibrary : MonoBehaviour
     /// сейф скрипт -------------------------------
     public void buyCards(int idBuyCard)
     {
-        for (int i = 0; i < cardsPool.Count; i++)
+        for (int i = 0; i < gameCardsPool.Count; i++)
         {
 
-            if (cardsPool[i].id == idBuyCard)
+            if (gameCardsPool[i].id == idBuyCard)
             {
                 PlayerPrefs.SetInt("DeckLibrary " + idBuyCard, 1);
             }
@@ -121,10 +115,10 @@ public class GameCardsLibrary : MonoBehaviour
 
     public void sellCards(int idSellCard)
     {
-        for (int i = 0; i < cardsPool.Count; i++)
+        for (int i = 0; i < gameCardsPool.Count; i++)
         {
 
-            if (cardsPool[i].id == idSellCard)
+            if (gameCardsPool[i].id == idSellCard)
             {
                 PlayerPrefs.SetInt("DeckLibrary " + idSellCard, 0);
             }

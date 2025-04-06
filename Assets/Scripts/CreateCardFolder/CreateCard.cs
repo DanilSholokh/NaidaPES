@@ -3,13 +3,13 @@ using UnityEngine;
 public class CreateCard
 {
 
-    public PoolsCardController poolsCard;
+    //public PoolsCardController poolsCard;
     private CardManager cardManager;
 
     // Конструктор класу CreateCard
     public CreateCard()
     {
-        poolsCard = PoolsCardController.Instance;
+        //poolsCard = PoolsCardController.Instance;
         cardManager = Resources.Load<CardManager>("Prefab/Card");
 
     }
@@ -21,6 +21,7 @@ public class CreateCard
         managerCard.card = card;
         
         managerCard.setDataCard(playerBase);
+        managerCard.isCreateLookDetect();
 
         return managerCard;
 

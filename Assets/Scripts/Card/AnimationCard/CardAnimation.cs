@@ -24,18 +24,19 @@ public class CardAnimation : MonoBehaviour
         AnimateCard(); // Запускаем анимацию "левитации"
     }
 
+
     private void AnimateCard()
     {
         // Сохраняем текущую позицию как базовую точку отсчёта
-        Vector3 startLocalPosition = rectTransform.localPosition;
+        Vector2 startAnchoredPosition = rectTransform.anchoredPosition;
         float randomHoverHeight = Random.Range(minHoverHeight, maxHoverHeight);
         float randomAnimationDuration = Random.Range(minAnimationDuration, maxAnimationDuration);
 
-        rectTransform.DOLocalMoveY(startLocalPosition.y + randomHoverHeight, randomAnimationDuration)
+        rectTransform.DOAnchorPosY(startAnchoredPosition.y + randomHoverHeight, randomAnimationDuration)
             .SetEase(Ease.InOutSine)
             .OnComplete(() =>
             {
-                rectTransform.DOLocalMoveY(startLocalPosition.y, randomAnimationDuration)
+                rectTransform.DOAnchorPosY(startAnchoredPosition.y, randomAnimationDuration)
                     .SetEase(Ease.InOutSine)
                     .OnComplete(() => AnimateCard());
             });
@@ -50,8 +51,8 @@ public class CardAnimation : MonoBehaviour
                 rectTransform.DOLocalRotate(Vector3.zero, randomAnimationDuration)
                     .SetEase(Ease.InOutSine);
             });
-
     }
+
 
     public void MoveToPosition(Vector3 targetPosition, float duration)
     {

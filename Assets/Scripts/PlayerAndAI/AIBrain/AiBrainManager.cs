@@ -1,32 +1,58 @@
+using Assets.Scripts.BattlefieldSystem;
 using Assets.Scripts.PlayerAndAI.AIBrain.StateModeAI;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
+
 
 public class AiBrainManager : MonoBehaviour
 {
 
-    [SerializeField] private ManagerCostPlayerSystem costSystem;
+    [SerializeField] private ManagerCostPlayedCardSystem costSystem;
     [SerializeField] private HandPlaceManager handSystem;
     [SerializeField] private DeckLibrary deck;
 
     private PoolsCardController poolCards;
+    private PlayerBase bot;
 
-    public List<CardSpell> spells = new List<CardSpell>();
-    public List<CardCreature> creatures = new List<CardCreature>();
+    private ReferiController referiSystem;
+
+    List<CardData> spells = new List<CardData>();
+    List<CardData> creatures = new List<CardData>();
+
+
+
 
     protected IBotModeState currentModeBot;
+
+    public ReferiController ReferiSystem {set => referiSystem = value; }
 
     public void setState(IBotModeState newState)
     {
         currentModeBot = newState; 
     }
 
+    public void setBotMode()
+    {
+
+        if (currentModeBot != null)
+        {
+            currentModeBot.ExiteMode(this);
+        }
+
+        Debug.Log("Calculate choose Mode");
+        setState(new ValueModeAI());
+        currentModeBot.EnterMode(this);
+    }
+
+    public void setBrainData(PlayerBase player)
+    {
+        bot = player;
+    }
+
     public void startTurn()
     {
         setBotMode();
-        currentModeBot.EnterMode(this);
+
     }
 
     public void endTurn()
@@ -36,64 +62,235 @@ public class AiBrainManager : MonoBehaviour
 
 
 
+    
 
 
-    public void setBotMode()
+
+
+
+
+
+
+
+
+    // turn AI
+
+    public void updateHandCards()
     {
-        //Calculate choose Mode
-        setState(new ValueModeAI());
+        updateListCreatures();
+        updateListSpells();
+
+        Debug.Log("знайшов карти в руці");
+    }    
+
+    public void updateListCreatures()
+    {
+        creatures = getHandCreature();
     }
 
-    public void initBotData()
+    public void updateListSpells()
     {
-        poolCards = PoolsCardController.Instance;
+        spells = getHandSpell();
+    }    
+
+    public bool hasCreaturesHand()
+    {
+        if (creatures.Count > 0)
+        {
+            Debug.Log("у руці є створіння");
+            return true;
+        }
+
+        return false;
+
+    }    
+
+    public bool countCreaturesThanSpells()
+    {
+        if (creatures.Count > spells.Count)
+        {
+            Debug.Log("сторінь більше ніж заклять");
+            return true;
+        }
+
+        return false;
+    }
 
 
+
+    public bool isPlaingSpellCreatureComboLogic()
+    {
+
+        int sumResult = 0;
+        CardData spell = null;
+        CardData creature = null;
+
+
+        for (int i = 0; i < spells.Count; i++)
+        {
+            for (int j = 0; j < creatures.Count; j++)
+            {
+                int sumPower = spells[i].getPowerCard() + creatures[j].getPowerCard();
+
+                if (sumPower > referiSystem.stats.PlayerPower)
+                {
+                    if (sumResult < sumPower)
+                    {
+                        sumResult = sumPower;
+                        spell = spells[i];
+                        creature = creatures[j];
+                    }
+
+                }
+
+            }
+
+
+        }
+
+
+        if (sumResult != 0)
+        {
+            Debug.Log("розіграв комбу створіння та закляття");
+            getHandCardManagerByData(spell).tryPlayCard();
+            getHandCardManagerByData(creature).tryPlayCard();
+            return true;
+        }
+
+
+        return false;
+
+    }
+
+
+
+
+    public void findPlaingSpell()
+    {
+        if (checkCostSlotSpell())
+        {
+            if (creatures.Count <= spells.Count)
+            {
+                CardManager spellCard = getHandCardManagerByData(getWeakleCard(spells));
+                spellCard.tryPlayCard();
+                Debug.Log("розіграв одне закляття");
+
+            }
+        }
+ 
+    }
+
+
+    public List<CardData> getCardsStrongerThanOpponent()
+    {
+        List<CardData> cardPowerFull = new List<CardData>();
+
+        for (int i = 0; i < creatures.Count; i++)
+        {
+            if (creatures[i].getPowerCard() > referiSystem.stats.PlayerPower)
+            {
+                cardPowerFull.Add(creatures[i]);
+            }
+        }
+
+        Debug.Log("шукаю сильних свторінь");
+
+        return cardPowerFull;
+
+
+    }
+    // turn ai end
+   
+
+
+
+
+
+    // sort cards ai 
+
+    public List<CardData> getListCreatures()
+        { return creatures; }
+
+    public List<CardData> getListSpells() 
+        { return spells; }
+
+    public List<CardData> getCardDataHand()
+    {
+        return poolCards.ConvertManagerCardsToCardsData(handSystem.getCardHand());
+    }
+
+    public List<CardData> getHandSpell()
+    {
+        return poolCards.getPoolSpell(getCardDataHand());
+    }
+
+    public List<CardData> getHandCreature()
+    {
+        return poolCards.GetPoolCreature(getCardDataHand());
+    }
+
+
+    public CardData getWeakleCard(List<CardData> cards)
+    {
+        Debug.Log("шукаю найслабшу карту з пулу підходящих карт");
+        return poolCards.findLowPowerCard(cards);
+    }
+
+
+
+    // hand ai 
+    public void createStartHand()
+    {
+        handSystem.createStartHand(bot, deck);
+    }
+
+    public CardManager getHandCardManagerByData(CardData card)
+    {
+        if (card != null)
+        {
+            return poolCards.FindCardManagerByData(handSystem.getCardHand(), card);
+        }
+
+        return null;
         
-
-        spells = getSpell();
-        creatures = getCreature();
-
     }
 
+
+
+
+    //deck AI manipulations
 
     public void createDeck()
     {
-
+        poolCards = PoolsCardController.Instance;
+        ReferiSystem = poolCards.gameManager.ReferiSystem;
         deck.createDeck();
+        deck.shuffleDeck();
+
         Debug.Log("BOT deck Complete");
 
     }
 
-
-    public void createStartHand(PlayerBase player)
+    public void drawCardLogic()
     {
-        handSystem.createStartHand(player, deck);
+        CardData cardData = deck.DrawCard();
+
+        if (cardData != null)
+        {
+            handSystem.addHandCards(cardData, bot);
+            Debug.Log("взяв карту з колоди");
+        }
+
     }
 
-    public void drawCard(PlayerBase player)
+    public bool isDrawCardDeck()
     {
-        handSystem.addHandCards(deck.getUpCard(), player);
-    }    
-
-
-
-
-
-
-    public List<CardData> getCardHand()
-    {
-        return poolCards.listManagerCardConvertToCardData(handSystem.handCardsList);
+        return deck.checkDrawCard();
     }
 
-    public List<CardSpell> getSpell()
+    public bool checkCostSlotSpell()
     {
-        return poolCards.getPoolSpells(getCardHand());
-    }
-
-    public List<CardCreature> getCreature()
-    {
-        return poolCards.getPoolCreature(getCardHand());
+        return costSystem.getCurrentCostSlotSpell() > 0;
     }
 
 

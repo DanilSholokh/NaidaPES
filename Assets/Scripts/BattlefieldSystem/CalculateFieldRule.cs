@@ -5,46 +5,105 @@ namespace Assets.Scripts.BattlefieldSystem
     public class CalculateFieldRule : MonoBehaviour
     {
 
-        int powerPlayer = 0;
-        int powerEnemy = 0;
+        int powerPlayerCreature = 0;
+        int powerEnemyCreature = 0;
+
+        private int powerPlayerSpell = 0;
+        private int powerEnemySpell = 0;
+
+        private int sumPowerPlayer = 0;
+        private int sumPowerEnemy = 0;
 
 
+        public int getPowerPlayerCreature() { return powerPlayerCreature; }
+        public int getPowerEnemyCreature() { return powerEnemyCreature; }
 
-        public int getPowerPlayer() { return powerPlayer; }
-        public int getPowerEnemy() { return powerEnemy; }
+        public int getPowerEnemySpell() { return powerEnemySpell;}
+        public int getPowerPlayerSpell() { return powerPlayerSpell; }
+
+        public int getSumPowerPlayer(){ return sumPowerPlayer; }
+        public int getSumPowerEnemy(){ return sumPowerEnemy; }
 
 
-        public void setPowerPlayer(int powerCard) 
+        public void setPowerCreaturePlayer(int powerCreature) 
         { 
-            powerPlayer = powerCard; 
+            powerPlayerCreature = powerCreature;
+            updatePowerPlayers();
         }
 
-        public void setPowerEnemy(int powerCard)
+        public void setPowerCreatureEnemy(int powerCreature)
         {
-            powerEnemy = powerCard;
+            powerEnemyCreature = powerCreature;
+            updatePowerPlayers();
         }
 
-        public void addPowerPlayer(int powerCard) 
+        public void addPowerCreaturePlayer(int powerCreature) 
         {
-            powerPlayer += powerCard;
+            powerPlayerCreature += powerCreature;
+            updatePowerPlayers();
         }
 
-        public void addPowerEnemey(int powerCard)
+        public void addPowerCreatureEnemey(int powerCreature)
         { 
-            powerEnemy += powerCard;
+            powerEnemyCreature += powerCreature;
+            updatePowerPlayers();
         }
 
-        public void removePowerPlayer(int powerCard)
+        public void removeCreaturePowerPlayer(int powerCreature)
         {
-            powerPlayer -= powerCard;
+            powerPlayerCreature -= powerCreature;
+            updatePowerPlayers();
         }
 
-        public void removePowerEnemy(int powerCard)
+        public void removeCreaturePowerEnemy(int powerCreature)
         {
-            powerEnemy -= powerCard;
+            powerEnemyCreature -= powerCreature;
+            updatePowerPlayers();
         }
 
-        public void zeroBothPlayers()
+
+        //Spell
+        public void setPowerSpellPlayer(int powerSpell)
+        {
+            powerPlayerSpell = powerSpell;
+        }
+
+        public void setPowerSpellEnemy(int powerSpell)
+        {
+            powerEnemySpell = powerSpell;
+        }
+
+        public void addPowerSpellPlayer(int powerSpell)
+        {
+            powerPlayerSpell += powerSpell; 
+            updatePowerPlayers(); 
+                   
+        }
+
+        public void addPowerSpellEnemy(int powerSpell)
+        {
+            powerEnemySpell += powerSpell;
+            updatePowerPlayers();
+        }
+
+        public void removePowerSpellPlayer(int powerSpell)
+        {
+            powerPlayerSpell -= powerSpell;
+            updatePowerPlayers();
+        }    
+
+        public void removePowerSpellEnemy(int powerSpell)
+        {
+            powerEnemySpell -= powerEnemySpell;
+            updatePowerPlayers();
+        }
+
+
+
+
+
+
+        public void resetPowerPlayers()
         {
             refreshPlayer();
             refreshEnemy();
@@ -52,13 +111,27 @@ namespace Assets.Scripts.BattlefieldSystem
 
         public void refreshPlayer()
         {
-            powerPlayer = 0;
+            powerPlayerCreature = 0;
+            updatePowerPlayers();
         }    
 
         public void refreshEnemy()
         {
-            powerEnemy = 0; 
+            powerEnemyCreature = 0;
+            updatePowerPlayers();
         }
+
+
+
+        private void updatePowerPlayers()
+        {
+            sumPowerEnemy = powerEnemyCreature + powerEnemySpell;
+            sumPowerPlayer = powerPlayerCreature + powerPlayerSpell;
+
+        }
+
+
+
 
     }
 }

@@ -7,6 +7,9 @@ public class PoolsCardController : MonoBehaviour
 
     public static PoolsCardController Instance { get; private set; }
 
+    private SortCards sort;
+    public  GameManager gameManager;
+
     private GameCardsLibrary gameLibrary;
     private PlayerCardLibrary playerLibrary;
     
@@ -29,30 +32,71 @@ public class PoolsCardController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
 
-
+        sort = GetComponent<SortCards>();
         gameLibrary = GetComponent<GameCardsLibrary>(); 
         playerLibrary = GetComponent<PlayerCardLibrary>();
+
+
+    }
+
+    private void Start()
+    {
+        //Instance = this;
+        handPlaceAI.gameManager = gameManager;
+        handPlacePlayer.gameManager = gameManager;
 
     }
 
 
-    public List<CardData> listManagerCardConvertToCardData(List<CardManager> cards)
+    public List<CardData> ConvertManagerCardsToCardsData(List<CardManager> cards)
     {
         List<CardData> cardsData = new List<CardData>();
 
-        for (int i = 0; i > cards.Count; i++)
+        for (int i = 0; i < cards.Count; i++)
         {
             cardsData.Add(cards[i].card);
         }
 
         return cardsData;
+
+    }
+
+    public CardManager FindCardManagerByData(List<CardManager> cards, CardData data)
+    {
+        for (int i = 0; i < cards.Count; i++)
+        {
+            if(cards[i].card.getId() == data.id)
+            {
+                return cards[i];
+            }
+        }
+
+
+        return null;
+
     }
 
 
+    public CardData FindCardPowerfullThan(List<CardData> cards, int minPower)
+    {
+        return sort.findLowPowerCard(sort.getPoolPowerUp(cards, minPower));
+    }
+
+    public CardData FindCardWeakerThan(List<CardData> cards, int maxPower)
+    {
+        return sort.findLowPowerCard(sort.getPoolPowerDown(cards, maxPower));
+    }
+
+    public CardData findLowPowerCard(List<CardData> cards)
+    {
+        return sort.findLowPowerCard(cards);
+    }    
+
     public CardData getRandomGameCard()
     {
-        return gameLibrary.getRandomCard();
+        return sort.getRandomCard(gameLibrary.getCardList());
     }
 
     public CardData getRandomDeckCardHuman()
@@ -65,139 +109,37 @@ public class PoolsCardController : MonoBehaviour
         return botDeckLibrary.getRandomCard();
     }
 
-    public CardData getRandomPlayerCard()
+    public CardData getRandomPlayerCollectionsCard()
     {
         return gameLibrary.findCard(playerLibrary.getRandomIdCard());
     }    
 
-    public List<CardData> getPoolPlayerCards() // get all player cards in list<CardData>
+    public List<CardData> getPoolPlayerCollectionCards() // get all player cards in list<CardData>
     { 
         return gameLibrary.findListCards(playerLibrary.getPlayerCards());
     }
 
     public List<CardData> getPoolTypeCards(string typeCard)
     {
-        return gameLibrary.getListTypeCards(typeCard);
+        return sort.getListTypeCards(gameLibrary.getCardList(), typeCard);
     }
 
-    public List<CardSpell> getPoolAllSpells()
+
+    public List<CardData> GetPoolCreature(List<CardData> cards)
     {
-        return getPoolSpells(gameLibrary.getCardList());
+        return sort.getPoolCreature(cards);
     }
 
-    public List<CardCreature> getPoolPowerCreaturesUp(int minPower, List<CardData> cards)
+    public List<CardData> getPoolSpell(List<CardData> cards)
     {
-
-        List<CardCreature> creatures = getPoolCreature(cards);
-
-        for (int i = 0; i < creatures.Count; i++)
-        {
-            if (creatures[i].getPowerCard() <= minPower)
-            {
-                creatures.RemoveAt(i);
-            }
-        }
-
-        return creatures;
-    
+        return sort.getPoolSpells(cards);
     }
 
-
-    public List<CardCreature> getPoolPowerCreaturesDown(int maxPower, List<CardData> cards)
+    public List<CardData> getPoolAllGameSpells()
     {
-
-        List<CardCreature> creatures = getPoolCreature(cards);
-
-        for (int i = 0; i < creatures.Count; i++)
-        {
-            if (creatures[i].getPowerCard() >= maxPower)
-            {
-                creatures.RemoveAt(i);
-            }
-        }
-
-        return creatures;
-
+        return sort.getPoolSpells(gameLibrary.getCardList());
     }
 
 
-
-    public List<CardSpell> getPoolPowerSpellsUp(int minPower, List<CardData> cards)
-    {
-
-        List<CardSpell> spells = getPoolSpells(cards);
-
-        for (int i = 0; i < spells.Count; i++)
-        {
-            if (spells[i].getPowerCard() <= minPower)
-            {
-                spells.RemoveAt(i);
-            }
-        }
-
-        return spells;
-
-    }
-
-
-    public List<CardSpell> getPoolPowerSpellsDown(int maxPower, List<CardData> cards)
-    {
-
-        List<CardSpell> spells = getPoolSpells(cards);
-
-        for (int i = 0; i < spells.Count; i++)
-        {
-            if (spells[i].getPowerCard() >= maxPower)
-            {
-                spells.RemoveAt(i);
-            }
-        }
-
-        return spells;
-
-    }
-
-    public List<CardCreature> getPoolCreature(List<CardData> cardsPool)
-    {
-
-        List<CardCreature> newCardCreature = new List<CardCreature>();
-
-        if (cardsPool != null)
-        {
-            foreach (var card in cardsPool)
-            {
-                if (card is CardCreature creature)
-                {
-                    newCardCreature.Add(creature);
-                }
-            }
-        }
-
-        return newCardCreature;
-
-    }
-
-
-    public List<CardSpell> getPoolSpells(List<CardData> cards)
-    {
-
-        List<CardSpell> newCardSpell = new List<CardSpell>();
-
-        if (cards != null)
-        {
-            foreach (var card in cards)
-            {
-                if (card is CardSpell spell)
-                {
-                    newCardSpell.Add(spell);
-                }
-            }
-        }
-
-        return newCardSpell;
-
-    }
-
-
-
+                                                                                                                                                                                                                                                                              
 }    

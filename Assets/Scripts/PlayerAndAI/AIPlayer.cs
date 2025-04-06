@@ -8,30 +8,43 @@ public class AIPlayer : PlayerBase
 
     public override void logicDrawCard()
     {
-        brain.drawCard(this);
+        brain.drawCardLogic();
     }
 
     public override void logicPlayCard(CardManager cardManager)
     {
-        CardData card = cardManager.card;
 
-        if (card.isCountCost(this))
-        {
+        cardManager.PlayedCard();
 
-            card.PlayCard(this);
-            cardManager.deleteCard();
+        //if (cardManager.card.isCostPowerThanEnemyField(gameManager.managerField.getSumPlayerPower()))
+        //{
+        //    if (cardManager.isPlayCostsCard())
+        //    {
+        //        cardManager.PlayedCard();
+        //    }
+        //}
+        //else
+        //{
+        //    Debug.Log("not enough creature power, AI");
+        //}
 
-        }
 
+    }
+
+
+    public override void logicEndTurn()
+    {
+        brain.endTurn();
     }
 
 
     public override void SetState(IGamePlayState newState)
     {
         base.SetState(newState);
-        if (newState is IGamePlayState)
+        if (newState is EnemyTurnState)
         {
             TakeTurnAutomatically(); // Якщо це хід AI, він починає автоматично
+
         }
     }
 
@@ -39,8 +52,9 @@ public class AIPlayer : PlayerBase
     {
         // Логіка вибору дії AI
         Debug.Log("Ai turn ");
-        DrawCard();
-        //logicPlayCard(hand.);
+
+        brain.startTurn();
+        //DrawCard();
 
 
         endTurn();
@@ -49,19 +63,28 @@ public class AIPlayer : PlayerBase
 
     public void endTurn()
     {
-        resetMaxCosts();
         EndTurn();
     }
 
-    public void CreateDeck()
+    public void SetupGame()
     {
+        brain.setBrainData(this);
         brain.createDeck();
-        brain.createStartHand(this);
+        brain.createStartHand();
     }    
 
-    public override void setPower(CardData card)
+    public override void setPowerCreatures(CardData card)
     {
-        PowerPlayer = gameManager.managerField.getEnemyPower();
-        gameManager.managerField.setPowerStatusEnemy(card.getAddPowerCard(PowerPlayer));
+        gameManager.ReferiSystem.setCreaturePowerStatusEnemy(card);
+
     }
+
+    public override void setPowerSpells(CardData card)
+    {
+        gameManager.ReferiSystem.setSpellPowerStatusEnemy(card);
+
+    }
+
+
+
 }

@@ -13,7 +13,7 @@ public abstract class CardData : ScriptableObject
 
     public int cost;
 
-    public enum BaseCardType
+    public enum RaceCardType
     {
         Naida,
         Evil,
@@ -21,16 +21,24 @@ public abstract class CardData : ScriptableObject
 
     }
 
-    public abstract BaseCardType getCardType();
+    public enum BaceCardType
+    {
+        Curse, // stay on Enemy
+        Buffs, // stay on CurrentPlay (who played card)
+        Supporte // same buffs
+
+    }
+
+    public abstract RaceCardType getCardType();
+    public abstract BaceCardType getBaceType();
     public abstract void PlayCard(PlayerBase playerBase);
     public abstract int getPowerCard();
     public abstract bool isCountCost(PlayerBase player);
-    public abstract int getAddPowerCard(int power);
+    public abstract bool isCostPowerThanEnemyField(int powerCreatureEnemy);
 
     public Sprite getSpriteDataCard()
     {
-        return spriteCard;
-        
+        return spriteCard;  
     }
 
     public string getNameDataCard()
@@ -41,6 +49,11 @@ public abstract class CardData : ScriptableObject
     public int getCostCard()
     {
         return cost;
+    }
+
+    public int getId()
+    {
+        return id;
     }
 
 
