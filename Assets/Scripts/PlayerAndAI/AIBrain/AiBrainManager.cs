@@ -1,4 +1,3 @@
-using Assets.Scripts.BattlefieldSystem;
 using Assets.Scripts.PlayerAndAI.AIBrain.StateModeAI;
 using System.Collections.Generic;
 using UnityEngine;
@@ -132,7 +131,7 @@ public class AiBrainManager : MonoBehaviour
             {
                 int sumPower = spells[i].getPowerCard() + creatures[j].getPowerCard();
 
-                if (sumPower > referiSystem.stats.PlayerPower)
+                if (sumPower > referiSystem.getPowerStatusPlayer())
                 {
                     if (sumResult < sumPower)
                     {
@@ -187,7 +186,7 @@ public class AiBrainManager : MonoBehaviour
 
         for (int i = 0; i < creatures.Count; i++)
         {
-            if (creatures[i].getPowerCard() > referiSystem.stats.PlayerPower)
+            if (creatures[i].getPowerCard() > referiSystem.getPowerStatusPlayer())
             {
                 cardPowerFull.Add(creatures[i]);
             }
@@ -214,10 +213,12 @@ public class AiBrainManager : MonoBehaviour
     public List<CardData> getListSpells() 
         { return spells; }
 
+
     public List<CardData> getCardDataHand()
     {
         return poolCards.ConvertManagerCardsToCardsData(handSystem.getCardHand());
     }
+
 
     public List<CardData> getHandSpell()
     {

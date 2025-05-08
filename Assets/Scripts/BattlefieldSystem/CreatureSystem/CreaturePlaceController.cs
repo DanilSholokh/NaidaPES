@@ -6,8 +6,8 @@ public class CreaturePlaceController : MonoBehaviour
     [SerializeField] private Transform placePlayer;   
     [SerializeField] private Transform placeEnemy;
 
-    [SerializeField] private CardCreature currentCreatureDataPlayer;
-    [SerializeField] private CardCreature currentCreatureDataEnemy;
+    [SerializeField] private CardCreature currentCreaturePlayer;
+    [SerializeField] private CardCreature currentCreatureEnemy;
 
 
     public Transform getPositionCreaturePlayer()
@@ -23,14 +23,14 @@ public class CreaturePlaceController : MonoBehaviour
 
     public void setCreatureDataPlayer(CardCreature creature)
     { 
-        currentCreatureDataPlayer = creature;
+        currentCreaturePlayer = creature;
     
     }
 
 
     public void setCreatureDataEnemy(CardCreature creature)
     {
-        currentCreatureDataPlayer = creature;
+        currentCreaturePlayer = creature;
 
     }
 

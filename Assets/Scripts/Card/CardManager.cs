@@ -32,22 +32,28 @@ public class CardManager : MonoBehaviour
             uiController = GetComponent<UICardController>();
 
             player = playerBase;
-
             
+
         }       
 
     }
 
-    public void isCreateLookDetect()
+    public void setUICard()
     {
-        if (player is Player)
-        {
-            uiController.initIUdata(card);
-        }
-        else
+        uiController.initIUdata(card);
+    }
+
+    public void setUILookBlockDetect()
+    {
+        if (player is AIPlayer)
         {
             uiController.activeCardBack();
         }
+        else
+        {
+            setUICard();
+        }
+
     }
 
     public void tryPlayCard()

@@ -21,7 +21,7 @@ public class CreateCard
         managerCard.card = card;
         
         managerCard.setDataCard(playerBase);
-        managerCard.isCreateLookDetect();
+        
 
         return managerCard;
 

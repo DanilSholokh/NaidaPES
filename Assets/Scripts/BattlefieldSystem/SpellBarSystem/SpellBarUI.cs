@@ -27,7 +27,10 @@ public class SpellBarUI : MonoBehaviour
         if (card is CardSpell cardSpell)
         {
             CardManager cardManager = createCard.CreateCardInstance(cardSpell, transform, playerBase);
+            
+            cardManager.setUICard();
             playerBarData.addListCardSpell(cardSpell, cardManager);
+
 
             //cardManager.cardAnimation.StopAnimation();
         }

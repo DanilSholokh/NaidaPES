@@ -19,8 +19,8 @@ public class StatsPlayersData : MonoBehaviour
     public int EnemyHP { get => _enemyHP; private set => _enemyHP = value; }
     public int PlayerDamage { get => _playerDamage; private set => _playerDamage = value; }
     public int EnemyDamage { get => _enemyDamage; private set => _enemyDamage = value; }
-    public int PlayerPower { get => _playerPower; private set => _playerPower = value; }
-    public int EnemyPower { get => _enemyPower; private set => _enemyPower = value; }
+    public int PlayerPower { get => _playerPower; set => _playerPower = value; }
+    public int EnemyPower { get => _enemyPower; set => _enemyPower = value; }
 
 
 
@@ -118,6 +118,9 @@ public class StatsPlayersData : MonoBehaviour
     {
         return addEntity(EnemyPower, power);
     }
+
+
+
 
 
 

@@ -7,29 +7,28 @@ public class Player : PlayerBase
     public override void logicPlayCard(CardManager cardManager)
     {
 
-        if (gameManager.ReferiSystem.isCheckCardOnField(cardManager.transform.position))
+        if (cardManager.card.isCostPowerThanEnemyField(gameManager.ReferiSystem.getPowerStatusEnemy()))
         {
 
-            if (cardManager.isPlayCostsCard())
+            if (gameManager.ReferiSystem.isCheckCardOnField(cardManager.transform.position))
             {
-                cardManager.PlayedCard();
+
+                if (cardManager.isPlayCostsCard())
+                {
+                    cardManager.PlayedCard();
+
+                }
 
             }
-
-            if (cardManager.card.isCostPowerThanEnemyField(gameManager.ReferiSystem.getRefreshEnemyPower()))
-            {
-                
-            }
-            
-
-
         }
+
+        
 
 
     
     }
 
-    public override void logicDrawCard()
+    public override void logicDrawCard() 
     {
         hand.addHandCards(deck.getUpCard(), this);
     }

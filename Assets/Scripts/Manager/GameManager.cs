@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             startAiTurn();
         }
         else
-        {
+        {   
             startHumanTurn();
         }
 
@@ -46,6 +46,9 @@ public class GameManager : MonoBehaviour
 
     private void startHumanTurn()
     {
+        ReferiSystem.AiPlayerEndTurn();
+        ReferiSystem.PlayerStartTurn();
+
         humanPlayer.UpdateDataTurn();
         currentPlayer = humanPlayer; // Передача ходу гравцю
         currentPlayer.SetState(new PlayerTurnState()); 
@@ -55,6 +58,9 @@ public class GameManager : MonoBehaviour
 
     private void startAiTurn()
     {
+        ReferiSystem.PlayerEndTurn();
+        ReferiSystem.AiPlayerStartTurn();
+
         aiPlayer.UpdateDataTurn();
         currentPlayer = aiPlayer; // Передача ходу AI
         currentPlayer.SetState(new EnemyTurnState());

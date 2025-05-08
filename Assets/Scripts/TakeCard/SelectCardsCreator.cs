@@ -86,7 +86,8 @@ public abstract class SelectCardsCreator
                 cardsTreeTableList.Add(cardManager);
                 cardManager.Handler.setPanelTreeCard(this);
                 cardManager.cardAnimation.StopAnimation();
-                
+
+                cardManager.setUICard();
 
             }
 

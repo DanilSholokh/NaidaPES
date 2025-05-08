@@ -13,6 +13,7 @@ public class PlayerSpellBarData
     {
         cardSpellsList.Add(spell);
         cardManagers.Add(cardManager);
+
     }
 
     public CardManager removeListCardSpell(CardSpell spell)

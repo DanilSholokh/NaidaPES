@@ -35,7 +35,7 @@ public abstract class PlayerBase : MonoBehaviour
 
     public virtual void DrawCard()
     {
-        currentState.DrawCard(this);
+        currentState.DrawCard(this);    
     }
 
     public virtual void EndTurn()

@@ -46,8 +46,10 @@ public class HandPlaceManager : MonoBehaviour
         }
 
         CardManager cardManager = createCard.CreateCardInstance(card, animHand.handRectTransform, playerBase);
-
+        
+        cardManager.setUILookBlockDetect();
         cardManager._gameManager = gameManager;
+
         handCardsList.Add(cardManager);
 
         cardManager._handPlaceCards = this;

@@ -19,7 +19,7 @@ public class ReferiController : MonoBehaviour
 
 
 
-    public StatsPlayersData stats;
+    private StatsPlayersData stats;
     //private 
 
 
@@ -27,6 +27,8 @@ public class ReferiController : MonoBehaviour
     public void prepareGame(GameManager gameManager)
     {
         this.gameManager = gameManager;
+
+        stats = GetComponent<StatsPlayersData>();
 
         spellBarDataEnemy = new PlayerSpellBarData();
         spellBarDataPlayer = new PlayerSpellBarData();
@@ -39,22 +41,71 @@ public class ReferiController : MonoBehaviour
 
 
 
-    public int getRefreshPlayerPower()
-    {
-        int sumPowerPlayer = spellBarDataPlayer.getPowerSpells() + creatureDataPlayer.Power;
-        fieldManager.uiFieldController.changePlayerPowerText(sumPowerPlayer);
 
-        return stats.addPlayrePower(sumPowerPlayer);
+    public void PlayerStartTurn()
+    {
+        creatureDataPlayer.refreshToZeroPowerCreature();
+        getRefreshPlayerPower();
+
+    }
+
+    public void PlayerEndTurn()
+    {
+        //calculate who win battle
+        //anim battle AIPlayer attack Player creature defens
+
+
+
+    }
+
+    public void AiPlayerStartTurn()
+    {
+        creatureDataEnemy.refreshToZeroPowerCreature();
+        getRefreshEnemyPower();
+
+
+
+    }
+
+    public void AiPlayerEndTurn()
+    {
+        //calculate who win battle
+        //anim battle Player attack AIPlayer creature defens
+    
+        
+    
+    }
+
+
+    
+
+
+
+
+    public int getPowerStatusPlayer() // for get check power status
+    {
+        return stats.PlayerPower;
+    }
+
+    public int getPowerStatusEnemy()
+    {  return stats.PlayerPower;}    
+
+    public int getRefreshPlayerPower() // if change power status
+    {
+        stats.PlayerPower = spellBarDataPlayer.getPowerSpells() + creatureDataPlayer.Power;
+        fieldManager.uiFieldController.changePlayerPowerText(stats.PlayerPower);
+
+        return stats.PlayerPower;
     
     }
 
 
     public int getRefreshEnemyPower()
     {
-        int sumPowerPlayer = spellBarDataEnemy.getPowerSpells() + creatureDataEnemy.Power;
-        fieldManager.uiFieldController.changeEnemyPowerText(sumPowerPlayer);
+        stats.EnemyPower = spellBarDataEnemy.getPowerSpells() + creatureDataEnemy.Power;
+        fieldManager.uiFieldController.changeEnemyPowerText(stats.EnemyPower);
 
-        return stats.addEnemyPower(sumPowerPlayer);
+        return stats.addEnemyPower(stats.EnemyPower);
 
     }
 
@@ -73,7 +124,7 @@ public class ReferiController : MonoBehaviour
 
         }
     }
-
+    
     public void setCreaturePowerStatusEnemy(CardData card)
     {
         if (card is CardCreature creatureData)
@@ -91,20 +142,14 @@ public class ReferiController : MonoBehaviour
 
     public void setSpellPowerStatusPlayer(CardData spell)
     {
-        if (spell is CardSpell spellData)
-        {
-            fieldManager.addSpellBarPlayer(spell, gameManager.currentPlayer, spellBarDataPlayer);
-            getRefreshPlayerPower();
-        }
+        fieldManager.addSpellBarPlayer(spell, gameManager.currentPlayer, spellBarDataPlayer);
+        getRefreshPlayerPower();
     }
 
     public void setSpellPowerStatusEnemy(CardData spell)
     {
-        if (spell is CardSpell spellData)
-        {
-            fieldManager.addSpellBarEnemy(spell, gameManager.currentPlayer, spellBarDataEnemy);
-            getRefreshEnemyPower();
-        }
+        fieldManager.addSpellBarEnemy(spell, gameManager.currentPlayer, spellBarDataEnemy);
+        getRefreshEnemyPower();
     }
 
 
